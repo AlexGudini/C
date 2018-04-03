@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title></title>
+</head>
+<script src="verificateFormula.js"></script>
+<script src="operation.js"></script>
+<script src="tableTruth.js"></script>
+<body>
+<p class ="title" id="text">Введите формулу:</p>
+    <p>
+    <form class="form" onsubmit="clickCheckFormula();">
+    <input type="text" id="inputFormula" placeholder="Введите формулу..." required>
+	<input value="Выполнить" onclick="clickCheckFormula()" type="button">
+	<div class="correctFormula" id="correctFormula"></div>
+    </form>
+    </p>
+
+    <div id="hiddenForm" class = "tab" hidden>
+	<div class="subFormula" id="subFormula"></div>
+    <div class="output" id="outputCheckTypeFormula"></div>
+        <h3>Таблица истинности:</h3>
+        <table border="1">
+            <tbody id="tbody"></tbody>
+        </table>
+    </div>
+</body>
+</html>
