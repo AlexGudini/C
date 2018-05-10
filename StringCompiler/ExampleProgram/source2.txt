@@ -1,0 +1,30 @@
+outMessage () 
+{
+	string b = "First call";
+	print(b);
+}
+
+outMessageNext () 
+{
+	string c = "Second call";
+	print(c);
+}
+
+main () 
+{
+	string a = "wow";
+	string b = "String";
+	string c = "alsdfk8h";
+	for (string d = "qwertyuiop"; empty(d); ) 
+	{
+		print(d);
+		print(b);
+	}
+	for (string a1 = "notempty"; empty(a1); ) {
+			print(a1);
+			print(b);
+	}
+	print("Function call"); 
+	outMessage();
+	outMessageNext();
+}

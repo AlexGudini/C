@@ -1,0 +1,104 @@
+group String;
+init(stat, funcs)::=<<
+package by.bsuir.yapis.compiller.stringcompiller.run;
+
+import org.antlr.runtime.RecognitionException;
+
+import by.bsuir.yapis.compiller.stringcompiller.operations.Operation;
+import by.bsuir.yapis.compiller.stringcompiller.type.Char;
+import by.bsuir.yapis.compiller.stringcompiller.type.CompareType;
+import by.bsuir.yapis.compiller.stringcompiller.type.EString;
+import by.bsuir.yapis.compiller.stringcompiller.type.IElement;
+
+public class Main {
+    <funcs;separator="\n\n">
+    
+    public static void main(String[] args) throws RecognitionException {
+        <stat;separator="\n">
+    }
+}
+>>
+
+funct(v, list_funcs, list_params)::=<<
+public static void <v> (<list_params>) {
+    <list_funcs;separator="\n">
+}
+>>
+
+params_template(list_types, list_ids)::=<<
+<list_types:{v|<v.text>};separator=", ">;
+>>
+
+if_template(cond, stat, stat2)::=<<
+if (<cond>) {
+    <stat;separator="\n">
+} else {
+    <stat2;separator="\n">
+}
+>>
+
+while_template(cond, stat)::=<<
+while (<cond>) {
+    <stat;separator="\n">
+}
+>>
+
+for_template(param, param2, param3, stat)::=<<
+for (<param> <param2>; <param3>) {
+    <stat;separator="\n">
+}
+>>
+
+func_template(cond)::=<<
+<cond>();
+>>
+
+var_define_template(type, list_id, list_value)::=<<
+IElement <list_id, list_value:{v, t|<v.text> = <t>};separator=",">;
+>>
+
+var_mass_define_template(type, list_id, list_value)::=<<
+IElement <list_id, list_value:{v, t|<v.text> = <t>};separator=",">;
+>>
+
+assign_template(id, expr)::=<<
+<id.text> = <expr>;
+>>
+
+plus_template(operands)::=<<
+Operation.plus(<operands;separator=",">)
+>>
+minus_template(operands)::=<<
+Operation.minus(<operands:{v|<v>};separator=",">)
+>>
+mult_template(operands)::=<<
+Operation.mult(<operands:{v|<v>};separator=",">)
+>>
+
+atom_template(operands)::=<<
+<operands:{v|<v>};separator=",">
+>>
+
+fun_print_template(e)::=<<
+Operation.print(<e>);
+>>
+
+fun_call_template(id, e)::=<<
+<id>(<e>);
+>>
+
+fun_empty_template(e)::=<<
+Operation.isEmpty(<e>)
+>>
+
+fun_length_template(f)::=<<
+Operation.length(<f>)
+>>
+
+string_template(f)::=<<
+new EString(<f>)
+>>
+
+char_template(f)::=<<
+new Char(<f>)
+>>

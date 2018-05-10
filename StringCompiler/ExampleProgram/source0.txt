@@ -1,0 +1,38 @@
+outMessage () 
+{
+	string b = "asdfgh";
+	print(b);
+}
+
+outMessageNext () 
+{
+	string c = "zxcvcvxzxcv";
+	print(c);
+}
+
+main ()
+ {
+	string dd1 = null;
+	string a = "qwerty";
+	print("Added a string variable");
+	if(empty(a))
+	{
+		print("If the string length is zero, then this message will appear");
+	}
+	string b = "String";
+	string c = "ing";
+	dd1 = a + b;
+	print(dd1);
+	print(b-c);
+	if (length(a) == length(b)) 
+	{
+		print("The string lengths equal");
+	}
+	else 
+	{
+		print("The string lengths not equal");
+	}
+	print("Call function"); 
+	outMessage();
+	outMessageNext();
+}
