@@ -1,0 +1,22 @@
+{
+Print("program")
+
+Element ww = "DODO"
+Element rr = "DODO"
+Element func = "Call fucntion"
+Element el3 = "element_2"
+
+For(ww==rr){
+    Print(rr)
+    ww = "sdf"
+}
+
+Length(rr)
+
+printfunc(func,el3)
+}
+
+Void printfunc(Element s, Element s2){
+Print(s)
+Print(s2)
+}
