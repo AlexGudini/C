@@ -1,0 +1,180 @@
+<div id="manageFavorites" class="modal">
+			<div class="modal-close"><img src="{%F:ARES%}img/png/close-d.png" alt=""></div>
+			<div class="modal-name">Manage favorites</div>
+			<form id="form-manage-favorite" class="tabs-modal">
+				<ul class="tabs" data-deep-link="true" data-update-history="true" data-deep-link-smudge="true" data-deep-link-smudge-delay="500" data-tabs id="modal-tabs">
+					<li class="tabs-title is-active"><a href="#add-favorites-modal">Add search filter to favorites</a></li>
+					<li class="tabs-title " aria-selected="true"><a href="#edit-delete-modal">Edit/Delete favorites</a></li>
+				</ul>
+				<div class="tabs-content" data-tabs-content="modal-tabs">
+				    <div class="tabs-panel is-active" id="add-favorites-modal">
+				    	<div class="col-row">
+				    		<div class="col col-2_7">
+				    			<div class="filter-item">
+				    				<div class="form-item checkbox">
+				    					<input type="checkbox">
+				    					<span></span>
+				    				</div>
+				    				<img src="{%F:ARES%}img/png/icons/restr.png" alt="">
+				    				<div class="filter-name">restaurant/cafe</div>
+				    			</div>
+				    			<div class="filter-item">
+				    				<div class="form-item checkbox">
+				    					<input type="checkbox">
+				    					<span></span>
+				    				</div>
+				    				<img src="{%F:ARES%}img/png/icons/avia.png" alt="">
+				    				<div class="filter-name">travel</div>
+				    			</div>
+				    			<div class="filter-item">
+				    				<div class="form-item checkbox">
+				    					<input type="checkbox">
+				    					<span></span>
+				    				</div>
+				    				<img src="{%F:ARES%}img/png/icons/theatre.png" alt="">
+				    				<div class="filter-name">theatre</div>
+				    			</div>
+				    			<div class="filter-item">
+				    				<div class="form-item checkbox">
+				    					<input type="checkbox">
+				    					<span></span>
+				    				</div>
+				    				<img src="{%F:ARES%}img/png/icons/shopping.png" alt="">
+				    				<div class="filter-name">shopping</div>
+				    			</div>
+				    			<div class="filter-item">
+				    				<div class="form-item checkbox">
+				    					<input type="checkbox">
+				    					<span></span>
+				    				</div>
+				    				<img src="{%F:ARES%}img/png/icons/museum.png" alt="">
+				    				<div class="filter-name">museum</div>
+				    			</div>
+				    			<div class="filter-item">
+				    				<div class="form-item checkbox">
+				    					<input type="checkbox">
+				    					<span></span>
+				    				</div>
+				    				<img src="{%F:ARES%}img/png/icons/groceries.png" alt="">
+				    				<div class="filter-name">groceries</div>
+				    			</div>
+				    		</div>
+				    		<div class="col col-2_7">
+				    			<div class="filter-item">
+				    				<div class="form-item checkbox">
+				    					<input type="checkbox">
+				    					<span></span>
+				    				</div>
+				    				<img src="{%F:ARES%}img/png/icons/garage.png" alt="">
+				    				<div class="filter-name">garage/workshop/repair</div>
+				    			</div>
+				    			<div class="filter-item">
+				    				<div class="form-item checkbox">
+				    					<input type="checkbox">
+				    					<span></span>
+				    				</div>
+				    				<img src="{%F:ARES%}img/png/icons/beach.png" alt="">
+				    				<div class="filter-name">beach</div>
+				    			</div>
+				    			<div class="filter-item">
+				    				<div class="form-item checkbox">
+				    					<input type="checkbox">
+				    					<span></span>
+				    				</div>
+				    				<img src="{%F:ARES%}img/png/icons/tourist.png" alt="">
+				    				<div class="filter-name">tourist Information</div>
+				    			</div>
+				    			<div class="filter-item">
+				    				<div class="form-item checkbox">
+				    					<input type="checkbox">
+				    					<span></span>
+				    				</div>
+				    				<img src="{%F:ARES%}img/png/icons/sightseeing.png" alt="">
+				    				<div class="filter-name">sightseeing</div>
+				    			</div>
+				    			<div class="filter-item">
+				    				<div class="form-item checkbox">
+				    					<input type="checkbox">
+				    					<span></span>
+				    				</div>
+				    				<img src="{%F:ARES%}img/png/icons/station.png" alt="">
+				    				<div class="filter-name">gas station</div>
+				    			</div>
+				    			<div class="filter-item">
+				    				<div class="form-item checkbox">
+				    					<input type="checkbox">
+				    					<span></span>
+				    				</div>
+				    				<img src="{%F:ARES%}img/png/icons/cash.png" alt="">
+				    				<div class="filter-name">cash machine</div>
+				    			</div>
+				    		</div>
+				    		<div class="col col-3_7 manager">
+				    			<div class="form-item">
+			    					<label for="">Favorite name:</label>
+			    					<input name="favorite_favoriteName" type="text">
+			    				</div>
+			    				<div class="form-item">
+			    					<label for="">Search type:</label>
+			    					<select name="favorite_searchType" id="">
+			    						<option value="By map">By map</option>
+										<option value="By map1">By map1</option>
+										<option value="By map2">By map2</option>
+										<option value="By map3">By map3</option>
+			    					</select>
+			    				</div>
+			    				<div class="form-item">
+			    					<label for="">Language:</label>
+			    					<select name="favorite_language" id="">
+			    						<option value="English">English</option>
+										<option value="German">German</option>
+										<option value="China">China</option>
+										<option value="Spain">Spain</option>
+			    					</select>
+			    				</div>
+			    				<div class="form-item">
+			    					<label for="">What:</label>
+			    					<input  name="favorite_what" type="text">
+			    				</div>
+			    				<div class="form-item">
+			    					<label for="">Category:</label>
+			    					<select name="favorite_category" id="" multiple>
+										<option value="BMW Service Partner">BMW Service Partner</option>
+										<option value="BMW Retailers">BMW Retailers</option>
+										<option value="School">School</option>
+										<option value="ATM">ATM</option>
+										<option value="Bank">Bank</option>
+										<option value="Public Parking">Public Parking</option>
+										<option value="Pharmacy">Pharmacy</option>
+										<option value="Medical Services">Medical Services</option>
+			    						<option value="Restaurants">Restaurants</option>
+			    						<option value="Named Place">Named Place</option>
+			    						<option value="German Food">German Food</option>
+			    						<option value="Speciality Store">Speciality Store</option>
+			    					</select>
+			    				</div>
+				    		</div>
+				    	</div>
+				    	<div class="flex align-justify align-middle mt-16">
+				    		<div class="items">
+								<a href="#" id="btn-favorites-copy" class="btn btn-color-blue">Copy data from search form</a>
+			    			</div>
+							<div class="btns">
+								<a href="#" class="btn btn-color-dark_grey mr-8" id="form-manage-favorite-submit">Submit</a>
+								<a href="#" class="btn btn-color-grey modal-cancel">Cancel</a>
+							</div>
+						</div>
+				    </div>
+				    <div class="tabs-panel" id="edit-delete-modal">
+				    	<div id="favorites-items" class="col-row" >
+				    		
+				    	</div>
+						<div class="flex align-right align-middle mt-16">
+							<div class="btns">
+								<a href="#" class="btn btn-color-grey modal-cancel">Cancel</a>
+							</div>
+						</div>
+				    </div>
+				</div>
+			</form>
+		</div>
