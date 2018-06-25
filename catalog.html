@@ -1,13 +1,11 @@
-{%section:MAIN%} {%->:HEADER%} {%->:TOP%} {%->:MIDDLE%} {%->:FOOTER%} {%endsection:MAIN%}
-{%section:HEADER->%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta name="viewport" content="width=1920, initial-scale=1">
 	<meta charset="UTF-8">
 	<title>index</title>
-	<link rel="stylesheet" href="{%F:ARES%}css/styles.css">
-	<link rel="stylesheet" href="{%F:ARES%}css/map.css">
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="stylesheet" href="assets/css/map.css">
 </head>
 <body>
 	<header class="header">
@@ -15,10 +13,10 @@
 			<div class="row">
 				<div class="columns small-12 flex align-middle">
 					<div class="logos">
-						<img src="{%F:ARES%}img/png/group.png" alt="">
-						<img src="{%F:ARES%}img/svg/bmw-logo.svg" alt="">
-						<img src="{%F:ARES%}img/svg/mini_cooper-logo.svg" alt="">
-						<img src="{%F:ARES%}img/png/rr-logo.png" alt="">
+						<img src="assets/img/png/group.png" alt="">
+						<img src="assets/img/svg/bmw-logo.svg" alt="">
+						<img src="assets/img/svg/mini_cooper-logo.svg" alt="">
+						<img src="assets/img/png/rr-logo.png" alt="">
 					</div>
 					<div class="profile">
 						<span>Helen Lampard</span>
@@ -33,7 +31,7 @@
 				<div class="columns small-12 flex align-middle">
 					<ul class="header-menu">
 						<li><a href="#" class="active">Service Request</a></li>
-						<li><a href="#">Services</a></li>
+						<li><a href="services.html">Services</a></li>
 						<li><a href="#" class="disabled">CIC Viewer</a></li>
 						<li><a href="#" class="disabled">Remote B-Call</a></li>
 						<li><a href="#" class="disabled">Remote Services</a></li>
@@ -65,16 +63,16 @@
 					</div>
 					<div class="infortation-user">
 						<div class="item">
-							<div class="text">Assigned to me</div><div id="pin" class="pin assignedToMe"></div>
+							<div class="text">Assigned to me</div><div id="pin" class="pin">0</div>
 						</div>
 						<div class="item">
-							<div class="text">Users logged in</div><div class="pin usersLoggedin"></div>
+							<div class="text">Users logged in</div><div class="pin">8</div>
 						</div>
 						<div class="item">
-							<div class="text">All requests</div><div class="pin allRequests"></div>
+							<div class="text">All requests</div><div class="pin">8</div>
 						</div>
 						<div class="item">
-							<div class="text">Currently unassigned</div><div class="pin unassigned"></div>
+							<div class="text">Currently unassigned</div><div class="pin">8</div>
 						</div>
 					</div>
 				</div>
@@ -90,8 +88,8 @@
 				</div>
 				<div class="accardion">
 					<div id="customerDaP" class="accardion-header">
-						<span class="more">More details <img src="{%F:ARES%}img/png/arrow-down.png" alt=""></span>
-						<span class="less">Less details <img src="{%F:ARES%}img/png/arrow-up.png" alt=""></span>
+						<span class="more">More details <img src="assets/img/png/arrow-down.png" alt=""></span>
+						<span class="less">Less details <img src="assets/img/png/arrow-up.png" alt=""></span>
 					</div>
 					<div class="accardion-content">
 						<div class="col col-1_3">
@@ -159,10 +157,10 @@
 					</div>
 					<div class="driver-information">
 						<div class="driver-auto">
-							<img src="{%F:ARES%}img/svg/bmw-logo.svg" alt="">
+							<img src="assets/img/svg/bmw-logo.svg" alt="">
 						</div>
 						<div class="driver-lang">
-							<img src="{%F:ARES%}img/png/flags/ger.png" alt="">
+							<img src="assets/img/png/flags/ger.png" alt="">
 						</div>
 					</div>
 				</div>
@@ -225,8 +223,8 @@
 									<span class="text">2018-03-23 13:47 UTC - Assigned manually </span>
 								</div>
 								<div class="flex row-btn mt-16 mb-38">
-									<a href="#" class="btn btn-color-green updatePosition">Update Position</a>
-									<a href="#" id="closeTheCall" class="btn btn-color-red ml-auto disabled">Close The Call</a>
+									<a href="#" class="btn btn-color-green">Update Position</a>
+									<a href="#" class="btn btn-color-red ml-auto closeCallOpen">Close The Call</a>
 								</div>
 							</div>
 
@@ -252,14 +250,14 @@
 
 							<div class="accardion-block">
 								<div class="accardion-block-header">Vehicle Information</div>
-								<div class="accardion-block-content vehicleInformation">
+								<div class="accardion-block-content">
 									<div class="flex">
 										<div class="col col-1_2">
 											<div class="item">
 												<span class="title">Country code:</span>
 												<span class="text">DE</span>
 												<span class="driver-lang">
-													<img src="{%F:ARES%}img/png/flags/ger.png" alt="">
+													<img src="assets/img/png/flags/ger.png" alt="">
 												</span>
 											</div>
 											<div class="item">
@@ -293,7 +291,7 @@
 												<span class="title">Vehicle phone:</span>
 												<span class="text">882393722928939</span>
 												<a class="driver-lang">
-													<img src="{%F:ARES%}img/png/call.png" alt="">
+													<img src="assets/img/png/call.png" alt="">
 												</a>
 											</div>
 										</div>
@@ -483,7 +481,7 @@
 				    				<div class="flex align-right align-middle mt-16">
 										<div class="btns">
 											<a href="#" class="btn btn-color-grey mr-8 modal-cancel">Cancel</a>
-											<a href="#" class="btn btn-color-dark_grey createReport-save">Save</a>
+											<a href="#" class="btn btn-color-dark_grey creatPoi-save">Save</a>
 										</div>
 						    		</div>
 								</div>
@@ -496,8 +494,8 @@
 								</div>
 								<div class="col">
 									<div class="flex row-btn">
-										<a id="fileReport" href="#" class="btn btn-color-green">File report</a>
-										<a id="closeCallOpen" href="#" class="btn btn-color-red disabled">Close The Call</a>
+										<a id="fileReport" href="#" class="btn btn-color-green disabled">File report</a>
+										<a href="#" class="btn btn-color-red closeCallOpen">Close The Call</a>
 										<div class="form-item checkbox ml-auto" style="margin-bottom: 0">
 					    					<input type="checkbox">
 					    					<span class="mr-14"></span>
@@ -507,12 +505,6 @@
 								</div>
 							</div>
 						</form>
-						
-						
-						
-						
-						
-						
 						<div class="tabs-panel" id="history">
 							<div class="flex mb-24">
 								<div class="pois-sort">
@@ -547,25 +539,25 @@
 									</div>
 									<div class="dropdown-content">
 										<div class="filter-item">
-						    				<div class="form-item checkbox"  data-index='all time'>
+						    				<div class="form-item checkbox"  data-index='All time'>
 						    					<input type="checkbox">
 						    					<span></span>
 						    				</div>
-						    				<div class="filter-name">all time</div>
+						    				<div class="filter-name">All time</div>
 						    			</div>
 						    			<div class="filter-item">
-						    				<div class="form-item checkbox"  data-index='last 24 hours'>
+						    				<div class="form-item checkbox"  data-index='Last 24 hours'>
 						    					<input type="checkbox">
 						    					<span></span>
 						    				</div>
-						    				<div class="filter-name">last 24 hours</div>
+						    				<div class="filter-name">Last 24 hours</div>
 						    			</div>
 						    			<div class="filter-item">
-						    				<div class="form-item checkbox"  data-index='last 48 hours'>
+						    				<div class="form-item checkbox"  data-index='Last 48 hours'>
 						    					<input type="checkbox">
 						    					<span></span>
 						    				</div>
-						    				<div class="filter-name">last 48 hours</div>
+						    				<div class="filter-name">Last 48 hours</div>
 						    			</div>
 						    			<div class="filter-item">
 						    				<div class="form-item checkbox" data-index='date'>
@@ -583,7 +575,7 @@
 									</div>
 								</div>
 								<div class="pois-filter">
-									<input type="search" placeholder="Search VIN">
+									<input type="search" placeholder="Search VIN" maxlength="17">
 								</div>
 							</div>
 
@@ -642,7 +634,7 @@
 														<span class="text">Rathausstrasse 6, 10178 Berlin, Germany</span>
 													</div>
 
-													<a id="resendHistory" href="#" class="btn btn-color-dark_grey mt-10">Resend POIs</a>
+													<a href="#" class="btn btn-color-dark_grey mt-10 resendHistory">Resend POIs</a>
 												</div>
 											</div>
 											<div class="item">
@@ -824,7 +816,7 @@
 														<span class="text">Rathausstrasse 6, 10178 Berlin, Germany</span>
 													</div>
 
-													<a id="resendHistory" href="#" class="btn btn-color-dark_grey mt-10">Resend POIs</a>
+													<a href="#" class="btn btn-color-dark_grey mt-10 resendHistory">Resend POIs</a>
 												</div>
 											</div>
 											<div class="item">
@@ -1006,7 +998,7 @@
 														<span class="text">Rathausstrasse 6, 10178 Berlin, Germany</span>
 													</div>
 
-													<a id="resendHistory" href="#" class="btn btn-color-dark_grey mt-10">Resend POIs</a>
+													<a href="#" class="btn btn-color-dark_grey mt-10 resendHistory">Resend POIs</a>
 												</div>
 											</div>
 											<div class="item">
@@ -1141,7 +1133,6 @@
 									</div>
 								</div>
 							</div>
-						
 						</div>
 						<div class="tabs-panel" id="poi">
 							<div class="col">
@@ -1160,37 +1151,37 @@
 									</ul>
 									<div class="tabs-content" data-tabs-content="deeplinked-tabs">
 									    <div class="tabs-panel is-active" id="form-position">
-									    	<form id="form-find-points-interest-position" class="form">
+									    	<form class="form">
 									    		<div class="form-row mb-18">
 									    			<label for=""></label>
 									    			<input class="now-posiotion" type="text" disabled>
 									    		</div>
 									    		<div class="form-row mb-18">
 									    			<label for="">What:</label>
-									    			<input class="mr-16  POILocationInput" name="what" type="text" placeholder="Enter a query">
+									    			<input class="mr-16" type="text" placeholder="Enter a query">
 									    			<label class="mr-16" for="">in</label>
-									    			<select name="language" id="">									    													    													    			
-															<option value="English">English</option>
-															<option value="German">German</option>
-															<option value="China">China</option>
-															<option value="Spain">Spain</option>
+									    			<select name="" id="">
+									    				<option value="">Rusads</option>
+									    				<option value="">English</option>
+									    				<option value="">English</option>
+									    				<option value="">English</option>
 									    			</select>
 									    		</div>
 									    		<div class="form-row mb-18">
 									    			<label for="">Category:</label>
-									    			<select name="category" id="" multiple>
-									    				<option value="Restaurant">Restaurant</option>
-									    				<option value="Named Place">Named Place</option>
-									    				<option value="German Food">German Food</option>
-									    				<option value="Speciality Store">Speciality Store</option>
-									    				<option value="School">School</option>
-									    				<option value="ATM">ATM</option>
-									    				<option value="Bank">Bank</option>
-									    				<option value="Public Parking">Public Parking</option>
-									    				<option value="Pharmacy">Pharmacy</option>
-									    				<option value="Medical Services">Medical Services</option>
-									    				<option value="BMW Service Partner">BMW Service Partner</option>
-									    				<option value="BMW Retailers">BMW Retailers</option>
+									    			<select name="" id="" multiple>
+									    				<option value="">Restaurant</option>
+									    				<option value="">Named Place</option>
+									    				<option value="">German Food</option>
+									    				<option value="">Speciality Store</option>
+									    				<option value="">School</option>
+									    				<option value="">ATM</option>
+									    				<option value="">Bank</option>
+									    				<option value="">Public Parking</option>
+									    				<option value="">Pharmacy</option>
+									    				<option value="">Medical Services</option>
+									    				<option value="">BMW Service Partner</option>
+									    				<option value="">BMW Retailers</option>
 									    			</select>
 									    			<div class="btn-row ml-42">
 									    				<a href="#" class="btn btn-color-grey mr-8">Meta</a>
@@ -1198,84 +1189,83 @@
 									    			</div>
 									    		</div>
 									    		<div class="form-row">
-									    			<a href="#" class="btn btn-color-blue mr-8 searchPOI">Search</a>
+									    			<a href="#" class="btn btn-color-blue mr-8">Search</a>
 									    			<button type="reset" class="btn btn-color-grey reset-find">Clear</button>
 									    		</div>
 									    	</form>
 									    </div>
 									    <div class="tabs-panel" id="form-address">
-									    	<form id="form-find-points-interest-address" class="form">
+									    	<form class="form">
 									    		<div class="form-row mb-18">
 									    			<label for="">What:</label>
-									    			<input class="mr-16 POILocationInput" name="what" type="text" placeholder="Enter a location">
+									    			<input class="mr-16" type="text" placeholder="Enter a location">
 									    			<label class="mr-16" for="">in</label>
-									    			<select name="language" id="">
-															<option value="English">English</option>
-															<option value="German">German</option>
-															<option value="China">China</option>
-															<option value="Spain">Spain</option>									    				
+									    			<select name="" id="">
+									    				<option value="">Rusads</option>
+									    				<option value="">English</option>
+									    				<option value="">English</option>
+									    				<option value="">English</option>
 									    			</select>
 									    		</div>
 									    		<div class="form-row mb-18">
 									    			<label for="">Category:</label>
-									    			<select name="category" id="" multiple>
-															<option value="Restaurant">Restaurant</option>
-															<option value="Named Place">Named Place</option>
-															<option value="German Food">German Food</option>
-															<option value="Speciality Store">Speciality Store</option>
-															<option value="School">School</option>
-															<option value="ATM">ATM</option>
-															<option value="Bank">Bank</option>
-															<option value="Public Parking">Public Parking</option>
-															<option value="Pharmacy">Pharmacy</option>
-															<option value="Medical Services">Medical Services</option>
-															<option value="BMW Service Partner">BMW Service Partner</option>
-															<option value="BMW Retailers">BMW Retailers</option>
-														</select>
+									    			<select name="" id="" multiple>
+									    				<option value="">Restaurant</option>
+									    				<option value="">Named Place</option>
+									    				<option value="">German Food</option>
+									    				<option value="">Speciality Store</option>
+									    				<option value="">School</option>
+									    				<option value="">ATM</option>
+									    				<option value="">Bank</option>
+									    				<option value="">Public Parking</option>
+									    				<option value="">Pharmacy</option>
+									    				<option value="">Medical Services</option>
+									    				<option value="">BMW Service Partner</option>
+									    				<option value="">BMW Retailers</option>
+									    			</select>
 									    			<div class="btn-row ml-42">
 									    				<a href="#" class="btn btn-color-grey mr-8">Meta</a>
 									    				<a href="#" class="btn btn-color-dark_grey">Normal</a>
 									    			</div>
 									    		</div>
 									    		<div class="form-row">
-									    			<a href="#" class="btn btn-color-blue mr-8 searchPOI">Search</a>
+									    			<a href="#" class="btn btn-color-blue mr-8">Search</a>
 									    			<button type="reset" class="btn btn-color-grey reset-find">Clear</button>
 									    		</div>
 									    	</form>
 									    </div>
 									    <div class="tabs-panel" id="form-destination">
-									    	<form id="form-find-points-interest-destination" class="form">
+									    	<form class="form">
 									    		<div class="form-row mb-18">
 									    			<label for=""></label>
 									    			<input class="now-posiotion" type="text" disabled>
 									    		</div>
 									    		<div class="form-row mb-18">
 									    			<label for="">What:</label>
-									    			<input class="mr-16 POILocationInput" name="what" type="text" placeholder="Enter a query">
+									    			<input class="mr-16" type="text" placeholder="Enter a query">
 									    			<label class="mr-16" for="">in</label>
-									    			<select name="language" id="">
-															<option value="English">English</option>
-															<option value="German">German</option>
-															<option value="China">China</option>
-															<option value="Spain">Spain</option>
+									    			<select name="" id="">
+									    				<option value="">Rusads</option>
+									    				<option value="">English</option>
+									    				<option value="">English</option>
+									    				<option value="">English</option>
 									    			</select>
 									    		</div>
 									    		<div class="form-row mb-18">
 									    			<label for="">Category:</label>
-									    			<select name="category" id="" multiple>
-															<option value="Restaurant">Restaurant</option>
-															<option value="Named Place">Named Place</option>
-															<option value="German Food">German Food</option>
-															<option value="Speciality Store">Speciality Store</option>
-															<option value="School">School</option>
-															<option value="ATM">ATM</option>
-															<option value="Bank">Bank</option>
-															<option value="Public Parking">Public Parking</option>
-															<option value="Pharmacy">Pharmacy</option>
-															<option value="Medical Services">Medical Services</option>
-															<option value="BMW Service Partner">BMW Service Partner</option>
-															<option value="BMW Retailers">BMW Retailers</option>
-														
+									    			<select name="" id="" multiple>
+									    				<option value="">Restaurant</option>
+									    				<option value="">Named Place</option>
+									    				<option value="">German Food</option>
+									    				<option value="">Speciality Store</option>
+									    				<option value="">School</option>
+									    				<option value="">ATM</option>
+									    				<option value="">Bank</option>
+									    				<option value="">Public Parking</option>
+									    				<option value="">Pharmacy</option>
+									    				<option value="">Medical Services</option>
+									    				<option value="">BMW Service Partner</option>
+									    				<option value="">BMW Retailers</option>
 									    			</select>
 									    			<div class="btn-row ml-42">
 									    				<a href="#" class="btn btn-color-grey mr-8">Meta</a>
@@ -1283,40 +1273,39 @@
 									    			</div>
 									    		</div>
 									    		<div class="form-row">
-									    			<a href="#" class="btn btn-color-blue mr-8 searchPOI">Search</a>
+									    			<a href="#" class="btn btn-color-blue mr-8">Search</a>
 									    			<button type="reset" class="btn btn-color-grey reset-find">Clear</button>
 									    		</div>
 									    	</form>
 									    </div>
 									    <div class="tabs-panel" id="form-map">
-									    	<form id="form-find-points-interest-map" class="form">
+									    	<form class="form">
 									    		<div class="form-row mb-18">
 									    			<label for="">What:</label>
-									    			<input class="mr-16 POILocationInput" name="what" type="text" placeholder="Enter a query">
+									    			<input class="mr-16" type="text" placeholder="Enter a query">
 									    			<label class="mr-16" for="">in</label>
-									    			<select name="language" id="">
-															<option value="English">English</option>
-															<option value="German">German</option>
-															<option value="China">China</option>
-															<option value="Spain">Spain</option>
+									    			<select name="" id="">
+									    				<option value="">Rusads</option>
+									    				<option value="">English</option>
+									    				<option value="">English</option>
+									    				<option value="">English</option>
 									    			</select>
 									    		</div>
 									    		<div class="form-row mb-18">
 									    			<label for="">Category:</label>
-									    			<select name="category" id="" multiple>
-															<option value="Restaurant">Restaurant</option>
-															<option value="Named Place">Named Place</option>
-															<option value="German Food">German Food</option>
-															<option value="Speciality Store">Speciality Store</option>
-															<option value="School">School</option>
-															<option value="ATM">ATM</option>
-															<option value="Bank">Bank</option>
-															<option value="Public Parking">Public Parking</option>
-															<option value="Pharmacy">Pharmacy</option>
-															<option value="Medical Services">Medical Services</option>
-															<option value="BMW Service Partner">BMW Service Partner</option>
-															<option value="BMW Retailers">BMW Retailers</option>
-														
+									    			<select name="" id="" multiple>
+									    				<option value="">Restaurant</option>
+									    				<option value="">Named Place</option>
+									    				<option value="">German Food</option>
+									    				<option value="">Speciality Store</option>
+									    				<option value="">School</option>
+									    				<option value="">ATM</option>
+									    				<option value="">Bank</option>
+									    				<option value="">Public Parking</option>
+									    				<option value="">Pharmacy</option>
+									    				<option value="">Medical Services</option>
+									    				<option value="">BMW Service Partner</option>
+									    				<option value="">BMW Retailers</option>
 									    			</select>
 									    			<div class="btn-row ml-42">
 									    				<a href="#" class="btn btn-color-grey mr-8">Meta</a>
@@ -1324,7 +1313,7 @@
 									    			</div>
 									    		</div>
 									    		<div class="form-row">
-									    			<a href="#" class="btn btn-color-blue mr-8 searchPOI">Search</a>
+									    			<a href="#" class="btn btn-color-blue mr-8">Search</a>
 									    			<button type="reset" class="btn btn-color-grey reset-find">Clear</button>
 									    		</div>
 									    	</form>
@@ -1334,19 +1323,112 @@
 							</div>
 							<div class="col">
 								<div class="title-block">Favorites</div>
-								<form  class="form-row">
-									<div  id ="list-of-favorites" class="flex mb-18 align-middle">
-										
-									</div>
-								</form>
+								<div class="form-row">
+									<div class="flex mb-18 align-middle">
+						    			<label class="mr-24" for="">List of favorites:</label>
+						    			<div class="flex-row favorites-mini mr-10">
+						    				<img src="assets/img/png/icons/restr.png" alt="">
+						    				<img src="assets/img/png/icons/restr.png" alt="">
+						    				<img src="assets/img/png/icons/restr.png" alt="">
+						    				<img src="assets/img/png/icons/restr.png" alt="">
+						    			</div>
+						    			<a id="manFavorites" href="#" class="btn btn-color-grey">Manage favorites</a>
+						    		</div>
+								</div>
 								<div class="accardion">
 								    <div id="favoritesAccardion" class="accardion-header">
-								        <span class="more">Show details <img src="{%F:ARES%}img/png/arrow-down.png" alt=""></span>
-								        <span class="less">Hide details <img src="{%F:ARES%}img/png/arrow-up.png" alt=""></span>
+								        <span class="more">Show details <img src="assets/img/png/arrow-down.png" alt=""></span>
+								        <span class="less">Hide details <img src="assets/img/png/arrow-up.png" alt=""></span>
 								    </div>
-								    <div id="hidden-favorites-accardion" class="accardion-content">
-							           
-									  
+								    <div class="accardion-content">
+							            <div class="favorites-item">
+							            	<div class="item mr-16">
+												<span class="title">Favorite name:</span>
+												<span class="text">Sports pubs</span>
+											</div>
+											<div class="item mr-20">
+												<span class="title">Search type:</span>
+												<span class="text">By map</span>
+											</div>
+											<div class="item mr-20">
+												<span class="title">Language:</span>
+												<span class="text">EN</span>
+											</div>
+											<div class="item mr-20">
+												<span class="title">What:</span>
+												<span class="text">Champions Sportsbar</span>
+											</div>
+											<div class="item mr-20">
+												<span class="title">Category:</span>
+												<span class="text">Restaurants</span>
+											</div>
+							            </div>
+							            <div class="favorites-item">
+							            	<div class="item mr-16">
+												<span class="title">Favorite name:</span>
+												<span class="text">Sports pubs</span>
+											</div>
+											<div class="item mr-20">
+												<span class="title">Search type:</span>
+												<span class="text">By map</span>
+											</div>
+											<div class="item mr-20">
+												<span class="title">Language:</span>
+												<span class="text">EN</span>
+											</div>
+											<div class="item mr-20">
+												<span class="title">What:</span>
+												<span class="text">Champions Sportsbar</span>
+											</div>
+											<div class="item mr-20">
+												<span class="title">Category:</span>
+												<span class="text">Restaurants</span>
+											</div>
+							            </div>
+							            <div class="favorites-item">
+							            	<div class="item mr-16">
+												<span class="title">Favorite name:</span>
+												<span class="text">Sports pubs</span>
+											</div>
+											<div class="item mr-20">
+												<span class="title">Search type:</span>
+												<span class="text">By map</span>
+											</div>
+											<div class="item mr-20">
+												<span class="title">Language:</span>
+												<span class="text">EN</span>
+											</div>
+											<div class="item mr-20">
+												<span class="title">What:</span>
+												<span class="text">Champions Sportsbar</span>
+											</div>
+											<div class="item mr-20">
+												<span class="title">Category:</span>
+												<span class="text">Restaurants</span>
+											</div>
+							            </div>
+							            <div class="favorites-item">
+							            	<div class="item mr-16">
+												<span class="title">Favorite name:</span>
+												<span class="text">Sports pubs</span>
+											</div>
+											<div class="item mr-20">
+												<span class="title">Search type:</span>
+												<span class="text">By map</span>
+											</div>
+											<div class="item mr-20">
+												<span class="title">Language:</span>
+												<span class="text">EN</span>
+											</div>
+											<div class="item mr-20">
+												<span class="title">What:</span>
+												<span class="text">Champions Sportsbar</span>
+											</div>
+											<div class="item mr-20">
+												<span class="title">Category:</span>
+												<span class="text">Restaurants</span>
+											</div>
+							            </div>
 								    </div>
 								</div>
 							</div>
@@ -1362,8 +1444,54 @@
 							<span class="title"><span class="freePois"></span> free / 5 max. - <span class="countPois"></span> POIs selected </span>
 						</div>
 						<div id="foundPous" class="pois">
-							
-						
+							<div class="pois-item">
+								<div class="pois-name">Vapiano Pizza</div>
+								<div class="pois-adress">Rathausstrasse 6, 10178 Berlin, Germany</div>
+								<div class="icons ml-auto">
+									<a href="#" class="flag-poi">
+										<img src="assets/img/png/flag.png" alt="">
+									</a>
+									<a href="#" class="edit-poi">
+										<img src="assets/img/png/edit.png" alt="">
+									</a>
+									<a href="#" class="close-poi">
+										<img src="assets/img/png/close.png" alt="">
+									</a>
+								</div>
+							</div>
+							<div class="pois-item">
+								<div class="pois-name">Vapiano Pizza</div>
+								<div class="pois-adress">Rathausstrasse 6, 10178 Berlin, Germany</div>
+								<div class="icons ml-auto">
+									<a href="#" class="flag-poi">
+										<img src="assets/img/png/flag.png" alt="">
+									</a>
+									<a href="#" class="edit-poi">
+										<img src="assets/img/png/edit.png" alt="">
+									</a>
+									<a href="#" class="close-poi">
+										<img src="assets/img/png/close.png" alt="">
+									</a>
+								</div>
+							</div>
+							<div class="pois-item">
+								<div class="pois-name">Vapiano Pizza</div>
+								<div class="pois-adress">Rathausstrasse 6, 10178 Berlin, Germany</div>
+								<div class="icons ml-auto">
+									<a href="#" class="flag-poi">
+										<img src="assets/img/png/flag.png" alt="">
+									</a>
+									<a href="#" class="edit-poi">
+										<img src="assets/img/png/edit.png" alt="">
+									</a>
+									<a href="#" class="close-poi">
+										<img src="assets/img/png/close.png" alt="">
+									</a>
+								</div>
+							</div>
+							<div class="flex align-right">
+								<a id="sendSuccess" href="#" class="btn btn-color-blue">Send</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -1394,29 +1522,971 @@
 							<li class="tabs-title"><a href="#panel10d">Premium</a></li>
 						</ul>
 						<div class="tabs-content" data-tabs-content="deeplinked-tabs">
-							<div class="tabs-panel is-active POIListItems" id="panel9d">
-													
-								<!--<nav aria-label="Pagination">
-									<ul class="pagination text-center">
-										<li class="pagination-previous"><a href="#"><img src="{%F:ARES%}img/png/arrow-prev.png" alt=""> Previous</a></li>
-										<li class="current">1</li>
-										<li><a href="#" aria-label="Page 2">2</a></li>
-										<li><a href="#" aria-label="Page 3">3</a></li>
-										<li><a href="#" aria-label="Page 4">4</a></li>
-										<li class="pagination-next"><a href="#">Next <img src="{%F:ARES%}img/png/arrow-next.png" alt=""></a></li>
-									</ul>
-								</nav>-->
-								
-							</div>
-							<div class="tabs-panel" id="panel10d">								
+							<div class="tabs-panel is-active" id="panel9d">
+								<div class="pois-list-item">
+									<div class="pois-list-header">
+										<div class="pois-list-col mr-16">
+											<div class="pois-placeholder">
+												<img src="assets/img/png/placeholder-pois.png" alt="">
+												<span class="pois-placeholder-num">A</span>
+											</div>
+										</div>
+										<div class="pois-list-col">
+											<div class="pois-list-name">Pizza Vapiano</div>
+											<div class="pois-list-adress">Rathausstrasse 6, 10178 Berlin, Germany</div>
+										</div>
+										<div class="pois-list-col mr-48">
+											<div class="icons">
+												<a href="">
+													<img src="assets/img/png/call-d.png" alt="">
+												</a>
+												<div class="pois-status open"></div>
+											</div>
+										</div>
+										<div class="pois-list-col mr-52">
+											<div class="item">
+												<span class="title">Distance:</span>
+												<span class="text">755 m</span>
+											</div>
+										</div>
+										<div class="pois-list-col">
+											<div class="item">
+												<span class="title">Provider:</span>
+												<span class="text">Google</span>
+											</div>
+										</div>
+										<div class="icons ml-auto">
+											<a href="#" class="add-poi">
+												<img src="assets/img/png/add-poi.png" alt="">
+											</a>
+											<a href="#" class="car-poi">
+												<img src="assets/img/png/car-poi.png" alt="">
+											</a>
+											<a href="#" class="way-poi">
+												<img src="assets/img/png/way-poi.png" alt="">
+											</a>
+											<a href="#" class="flag-poi-test">
+												<img src="assets/img/png/flag.png" alt="">
+											</a>
+										</div>
+									</div>
+									<div class="pois-list-content">
+										<div class="col col-1_2">
+											<div class="item">
+												<span class="title">URL:</span>
+												<span class="text">https://pizzavapiano.de</span>
+											</div>
+											<div class="item">
+												<span class="title">Rating:</span>
+												<span class="text"><span class="rating-pois">5.0</span></span>
+											</div>
+											<div class="item">
+												<span class="title">Phone:</span>
+												<span class="text">+49892885380</span>
+												<a class="driver-lang">
+													<img src="assets/img/png/call.png" alt="">
+												</a>
+											</div>
+											<div class="item item-reviews">
+												<span class="title">Reviews:</span>
+												<span class="text"> was suprised when i first come to this beautifull and ve... <a href="#" class="more">more</a></span>
+											</div>
+										</div>
+										<div class="col col-1_2">
+											<div class="item">
+												<span class="title">Provider:</span>
+												<span class="text">Google</span>
+											</div>
+											<div class="item">
+												<span class="title">Distance from vehicle:</span>
+												<span class="text">755 m</span>
+											</div>
+											<div class="item item-reviews">
+												<span class="title">Position:</span>
+												<span class="text">N 520 31’ 12.023’’, E 130 24’ 17.834’’, N 52.52, E 13.405</span>
+											</div>
+											<div class="item">
+												<span class="title">Opening hours:</span>
+												<div class="open-hours">
+													<div class="open-hours-day">
+														<div class="open-hours-title">Mon</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Tue</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Wed</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Thu</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Fri</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Sat</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Sun</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="pois-list-item">
+									<div class="pois-list-header">
+										<div class="pois-list-col mr-16">
+											<div class="pois-placeholder">
+												<img src="assets/img/png/placeholder-pois.png" alt="">
+												<span class="pois-placeholder-num">B</span>
+											</div>
+										</div>
+										<div class="pois-list-col">
+											<div class="pois-list-name">Pizza Vapiano</div>
+											<div class="pois-list-adress">Rathausstrasse 6, 10178 Berlin, Germany</div>
+										</div>
+										<div class="pois-list-col mr-48">
+											<div class="icons">
+												<a href="">
+													<img src="assets/img/png/call-d.png" alt="">
+												</a>
+												<div class="pois-status open"></div>
+											</div>
+										</div>
+										<div class="pois-list-col mr-52">
+											<div class="item">
+												<span class="title">Distance:</span>
+												<span class="text">755 m</span>
+											</div>
+										</div>
+										<div class="pois-list-col">
+											<div class="item">
+												<span class="title">Provider:</span>
+												<span class="text">Google</span>
+											</div>
+										</div>
+										<div class="icons ml-auto">
+											<a href="#" class="add-poi">
+												<img src="assets/img/png/add-poi.png" alt="">
+											</a>
+											<a href="#" class="car-poi">
+												<img src="assets/img/png/car-poi.png" alt="">
+											</a>
+											<a href="#" class="way-poi">
+												<img src="assets/img/png/way-poi.png" alt="">
+											</a>
+											<a href="#" class="flag-poi-test">
+												<img src="assets/img/png/flag.png" alt="">
+											</a>
+										</div>
+									</div>
+									<div class="pois-list-content">
+										<div class="col col-1_2">
+											<div class="item">
+												<span class="title">URL:</span>
+												<span class="text">https://pizzavapiano.de</span>
+											</div>
+											<div class="item">
+												<span class="title">Rating:</span>
+												<span class="text"><span class="rating-pois">5.0</span></span>
+											</div>
+											<div class="item">
+												<span class="title">Phone:</span>
+												<span class="text">+49892885380</span>
+												<a class="driver-lang">
+													<img src="assets/img/png/call.png" alt="">
+												</a>
+											</div>
+											<div class="item item-reviews">
+												<span class="title">Reviews:</span>
+												<span class="text"> was suprised when i first come to this beautifull and ve... <a href="#" class="more">more</a></span>
+											</div>
+										</div>
+										<div class="col col-1_2">
+											<div class="item">
+												<span class="title">Provider:</span>
+												<span class="text">Google</span>
+											</div>
+											<div class="item">
+												<span class="title">Distance from vehicle:</span>
+												<span class="text">755 m</span>
+											</div>
+											<div class="item item-reviews">
+												<span class="title">Position:</span>
+												<span class="text">N 520 31’ 12.023’’, E 130 24’ 17.834’’, N 52.52, E 13.405</span>
+											</div>
+											<div class="item">
+												<span class="title">Opening hours:</span>
+												<div class="open-hours">
+													<div class="open-hours-day">
+														<div class="open-hours-title">Mon</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Tue</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Wed</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Thu</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Fri</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Sat</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Sun</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="pois-list-item">
+									<div class="pois-list-header">
+										<div class="pois-list-col mr-16">
+											<div class="pois-placeholder">
+												<img src="assets/img/png/placeholder-pois.png" alt="">
+												<span class="pois-placeholder-num">C</span>
+											</div>
+										</div>
+										<div class="pois-list-col">
+											<div class="pois-list-name">Pizza Vapiano</div>
+											<div class="pois-list-adress">Rathausstrasse 6, 10178 Berlin, Germany</div>
+										</div>
+										<div class="pois-list-col mr-48">
+											<div class="icons">
+												<a href="">
+													<img src="assets/img/png/call-d.png" alt="">
+												</a>
+												<div class="pois-status open"></div>
+											</div>
+										</div>
+										<div class="pois-list-col mr-52">
+											<div class="item">
+												<span class="title">Distance:</span>
+												<span class="text">755 m</span>
+											</div>
+										</div>
+										<div class="pois-list-col">
+											<div class="item">
+												<span class="title">Provider:</span>
+												<span class="text">Google</span>
+											</div>
+										</div>
+										<div class="icons ml-auto">
+											<a href="#" class="add-poi">
+												<img src="assets/img/png/add-poi.png" alt="">
+											</a>
+											<a href="#" class="car-poi">
+												<img src="assets/img/png/car-poi.png" alt="">
+											</a>
+											<a href="#" class="way-poi">
+												<img src="assets/img/png/way-poi.png" alt="">
+											</a>
+											<a href="#" class="flag-poi-test">
+												<img src="assets/img/png/flag.png" alt="">
+											</a>
+										</div>
+									</div>
+									<div class="pois-list-content">
+										<div class="col col-1_2">
+											<div class="item">
+												<span class="title">URL:</span>
+												<span class="text">https://pizzavapiano.de</span>
+											</div>
+											<div class="item">
+												<span class="title">Rating:</span>
+												<span class="text"><span class="rating-pois">5.0</span></span>
+											</div>
+											<div class="item">
+												<span class="title">Phone:</span>
+												<span class="text">+49892885380</span>
+												<a class="driver-lang">
+													<img src="assets/img/png/call.png" alt="">
+												</a>
+											</div>
+											<div class="item item-reviews">
+												<span class="title">Reviews:</span>
+												<span class="text"> was suprised when i first come to this beautifull and ve... <a href="#" class="more">more</a></span>
+											</div>
+										</div>
+										<div class="col col-1_2">
+											<div class="item">
+												<span class="title">Provider:</span>
+												<span class="text">Google</span>
+											</div>
+											<div class="item">
+												<span class="title">Distance from vehicle:</span>
+												<span class="text">755 m</span>
+											</div>
+											<div class="item item-reviews">
+												<span class="title">Position:</span>
+												<span class="text">N 520 31’ 12.023’’, E 130 24’ 17.834’’, N 52.52, E 13.405</span>
+											</div>
+											<div class="item">
+												<span class="title">Opening hours:</span>
+												<div class="open-hours">
+													<div class="open-hours-day">
+														<div class="open-hours-title">Mon</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Tue</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Wed</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Thu</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Fri</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Sat</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Sun</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="pois-list-item">
+									<div class="pois-list-header">
+										<div class="pois-list-col mr-16">
+											<div class="pois-placeholder">
+												<img src="assets/img/png/placeholder-pois.png" alt="">
+												<span class="pois-placeholder-num">D</span>
+											</div>
+										</div>
+										<div class="pois-list-col">
+											<div class="pois-list-name">Pizza Vapiano</div>
+											<div class="pois-list-adress">Rathausstrasse 6, 10178 Berlin, Germany</div>
+										</div>
+										<div class="pois-list-col mr-48">
+											<div class="icons">
+												<a href="">
+													<img src="assets/img/png/call-d.png" alt="">
+												</a>
+												<div class="pois-status open"></div>
+											</div>
+										</div>
+										<div class="pois-list-col mr-52">
+											<div class="item">
+												<span class="title">Distance:</span>
+												<span class="text">755 m</span>
+											</div>
+										</div>
+										<div class="pois-list-col">
+											<div class="item">
+												<span class="title">Provider:</span>
+												<span class="text">Google</span>
+											</div>
+										</div>
+										<div class="icons ml-auto">
+											<a href="#" class="add-poi">
+												<img src="assets/img/png/add-poi.png" alt="">
+											</a>
+											<a href="#" class="car-poi">
+												<img src="assets/img/png/car-poi.png" alt="">
+											</a>
+											<a href="#" class="way-poi">
+												<img src="assets/img/png/way-poi.png" alt="">
+											</a>
+											<a href="#" class="flag-poi-test">
+												<img src="assets/img/png/flag.png" alt="">
+											</a>
+										</div>
+									</div>
+									<div class="pois-list-content">
+										<div class="col col-1_2">
+											<div class="item">
+												<span class="title">URL:</span>
+												<span class="text">https://pizzavapiano.de</span>
+											</div>
+											<div class="item">
+												<span class="title">Rating:</span>
+												<span class="text"><span class="rating-pois">5.0</span></span>
+											</div>
+											<div class="item">
+												<span class="title">Phone:</span>
+												<span class="text">+49892885380</span>
+												<a class="driver-lang">
+													<img src="assets/img/png/call.png" alt="">
+												</a>
+											</div>
+											<div class="item item-reviews">
+												<span class="title">Reviews:</span>
+												<span class="text"> was suprised when i first come to this beautifull and ve... <a href="#" class="more">more</a></span>
+											</div>
+										</div>
+										<div class="col col-1_2">
+											<div class="item">
+												<span class="title">Provider:</span>
+												<span class="text">Google</span>
+											</div>
+											<div class="item">
+												<span class="title">Distance from vehicle:</span>
+												<span class="text">755 m</span>
+											</div>
+											<div class="item item-reviews">
+												<span class="title">Position:</span>
+												<span class="text">N 520 31’ 12.023’’, E 130 24’ 17.834’’, N 52.52, E 13.405</span>
+											</div>
+											<div class="item">
+												<span class="title">Opening hours:</span>
+												<div class="open-hours">
+													<div class="open-hours-day">
+														<div class="open-hours-title">Mon</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Tue</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Wed</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Thu</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Fri</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Sat</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Sun</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
 								<nav aria-label="Pagination">
 									<ul class="pagination text-center">
-										<li class="pagination-previous"><a href="#"><img src="{%F:ARES%}img/png/arrow-prev.png" alt=""> Previous</a></li>
+										<li class="pagination-previous"><a href="#"><img src="assets/img/png/arrow-prev.png" alt=""> Previous</a></li>
 										<li class="current">1</li>
 										<li><a href="#" aria-label="Page 2">2</a></li>
 										<li><a href="#" aria-label="Page 3">3</a></li>
 										<li><a href="#" aria-label="Page 4">4</a></li>
-										<li class="pagination-next"><a href="#">Next <img src="{%F:ARES%}img/png/arrow-next.png" alt=""></a></li>
+										<li class="pagination-next"><a href="#">Next <img src="assets/img/png/arrow-next.png" alt=""></a></li>
+									</ul>
+								</nav>
+							</div>
+							<div class="tabs-panel" id="panel10d">
+								<div class="pois-list-item">
+									<div class="pois-list-header">
+										<div class="pois-list-col mr-16">
+											<div class="pois-placeholder">
+												<img src="assets/img/png/placeholder-pois.png" alt="">
+												<span class="pois-placeholder-num">A</span>
+											</div>
+										</div>
+										<div class="pois-list-col">
+											<div class="pois-list-name">Pizza Vapiano</div>
+											<div class="pois-list-adress">Rathausstrasse 6, 10178 Berlin, Germany</div>
+										</div>
+										<div class="pois-list-col mr-48">
+											<div class="icons">
+												<a href="">
+													<img src="assets/img/png/call-d.png" alt="">
+												</a>
+												<div class="pois-status open"></div>
+											</div>
+										</div>
+										<div class="pois-list-col mr-52">
+											<div class="item">
+												<span class="title">Distance:</span>
+												<span class="text">755 m</span>
+											</div>
+										</div>
+										<div class="pois-list-col">
+											<div class="item">
+												<span class="title">Provider:</span>
+												<span class="text">Google</span>
+											</div>
+										</div>
+										<div class="icons ml-auto">
+											<a href="#" class="add-poi">
+												<img src="assets/img/png/add-poi.png" alt="">
+											</a>
+											<a href="#" class="car-poi">
+												<img src="assets/img/png/car-poi.png" alt="">
+											</a>
+											<a href="#" class="way-poi">
+												<img src="assets/img/png/way-poi.png" alt="">
+											</a>
+											<a href="#" class="flag-poi-test">
+												<img src="assets/img/png/flag.png" alt="">
+											</a>
+										</div>
+									</div>
+									<div class="pois-list-content">
+										<div class="col col-1_2">
+											<div class="item">
+												<span class="title">URL:</span>
+												<span class="text">https://pizzavapiano.de</span>
+											</div>
+											<div class="item">
+												<span class="title">Rating:</span>
+												<span class="text"><span class="rating-pois">5.0</span></span>
+											</div>
+											<div class="item">
+												<span class="title">Phone:</span>
+												<span class="text">+49892885380</span>
+												<a class="driver-lang">
+													<img src="assets/img/png/call.png" alt="">
+												</a>
+											</div>
+											<div class="item item-reviews">
+												<span class="title">Reviews:</span>
+												<span class="text"> was suprised when i first come to this beautifull and ve... <a href="#" class="more">more</a></span>
+											</div>
+										</div>
+										<div class="col col-1_2">
+											<div class="item">
+												<span class="title">Provider:</span>
+												<span class="text">Google</span>
+											</div>
+											<div class="item">
+												<span class="title">Distance from vehicle:</span>
+												<span class="text">755 m</span>
+											</div>
+											<div class="item item-reviews">
+												<span class="title">Position:</span>
+												<span class="text">N 520 31’ 12.023’’, E 130 24’ 17.834’’, N 52.52, E 13.405</span>
+											</div>
+											<div class="item">
+												<span class="title">Opening hours:</span>
+												<div class="open-hours">
+													<div class="open-hours-day">
+														<div class="open-hours-title">Mon</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Tue</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Wed</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Thu</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Fri</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Sat</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Sun</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="pois-list-item">
+									<div class="pois-list-header">
+										<div class="pois-list-col mr-16">
+											<div class="pois-placeholder">
+												<img src="assets/img/png/placeholder-pois.png" alt="">
+												<span class="pois-placeholder-num">B</span>
+											</div>
+										</div>
+										<div class="pois-list-col">
+											<div class="pois-list-name">Pizza Vapiano</div>
+											<div class="pois-list-adress">Rathausstrasse 6, 10178 Berlin, Germany</div>
+										</div>
+										<div class="pois-list-col mr-48">
+											<div class="icons">
+												<a href="">
+													<img src="assets/img/png/call-d.png" alt="">
+												</a>
+												<div class="pois-status open"></div>
+											</div>
+										</div>
+										<div class="pois-list-col mr-52">
+											<div class="item">
+												<span class="title">Distance:</span>
+												<span class="text">755 m</span>
+											</div>
+										</div>
+										<div class="pois-list-col">
+											<div class="item">
+												<span class="title">Provider:</span>
+												<span class="text">Google</span>
+											</div>
+										</div>
+										<div class="icons ml-auto">
+											<a href="#" class="add-poi">
+												<img src="assets/img/png/add-poi.png" alt="">
+											</a>
+											<a href="#" class="car-poi">
+												<img src="assets/img/png/car-poi.png" alt="">
+											</a>
+											<a href="#" class="way-poi">
+												<img src="assets/img/png/way-poi.png" alt="">
+											</a>
+											<a href="#" class="flag-poi-test">
+												<img src="assets/img/png/flag.png" alt="">
+											</a>
+										</div>
+									</div>
+									<div class="pois-list-content">
+										<div class="col col-1_2">
+											<div class="item">
+												<span class="title">URL:</span>
+												<span class="text">https://pizzavapiano.de</span>
+											</div>
+											<div class="item">
+												<span class="title">Rating:</span>
+												<span class="text"><span class="rating-pois">5.0</span></span>
+											</div>
+											<div class="item">
+												<span class="title">Phone:</span>
+												<span class="text">+49892885380</span>
+												<a class="driver-lang">
+													<img src="assets/img/png/call.png" alt="">
+												</a>
+											</div>
+											<div class="item item-reviews">
+												<span class="title">Reviews:</span>
+												<span class="text"> was suprised when i first come to this beautifull and ve... <a href="#" class="more">more</a></span>
+											</div>
+										</div>
+										<div class="col col-1_2">
+											<div class="item">
+												<span class="title">Provider:</span>
+												<span class="text">Google</span>
+											</div>
+											<div class="item">
+												<span class="title">Distance from vehicle:</span>
+												<span class="text">755 m</span>
+											</div>
+											<div class="item item-reviews">
+												<span class="title">Position:</span>
+												<span class="text">N 520 31’ 12.023’’, E 130 24’ 17.834’’, N 52.52, E 13.405</span>
+											</div>
+											<div class="item">
+												<span class="title">Opening hours:</span>
+												<div class="open-hours">
+													<div class="open-hours-day">
+														<div class="open-hours-title">Mon</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Tue</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Wed</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Thu</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Fri</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Sat</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Sun</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="pois-list-item">
+									<div class="pois-list-header">
+										<div class="pois-list-col mr-16">
+											<div class="pois-placeholder">
+												<img src="assets/img/png/placeholder-pois.png" alt="">
+												<span class="pois-placeholder-num">C</span>
+											</div>
+										</div>
+										<div class="pois-list-col">
+											<div class="pois-list-name">Pizza Vapiano</div>
+											<div class="pois-list-adress">Rathausstrasse 6, 10178 Berlin, Germany</div>
+										</div>
+										<div class="pois-list-col mr-48">
+											<div class="icons">
+												<a href="">
+													<img src="assets/img/png/call-d.png" alt="">
+												</a>
+												<div class="pois-status open"></div>
+											</div>
+										</div>
+										<div class="pois-list-col mr-52">
+											<div class="item">
+												<span class="title">Distance:</span>
+												<span class="text">755 m</span>
+											</div>
+										</div>
+										<div class="pois-list-col">
+											<div class="item">
+												<span class="title">Provider:</span>
+												<span class="text">Google</span>
+											</div>
+										</div>
+										<div class="icons ml-auto">
+											<a href="#" class="add-poi">
+												<img src="assets/img/png/add-poi.png" alt="">
+											</a>
+											<a href="#" class="car-poi">
+												<img src="assets/img/png/car-poi.png" alt="">
+											</a>
+											<a href="#" class="way-poi">
+												<img src="assets/img/png/way-poi.png" alt="">
+											</a>
+											<a href="#" class="flag-poi-test">
+												<img src="assets/img/png/flag.png" alt="">
+											</a>
+										</div>
+									</div>
+									<div class="pois-list-content">
+										<div class="col col-1_2">
+											<div class="item">
+												<span class="title">URL:</span>
+												<span class="text">https://pizzavapiano.de</span>
+											</div>
+											<div class="item">
+												<span class="title">Rating:</span>
+												<span class="text"><span class="rating-pois">5.0</span></span>
+											</div>
+											<div class="item">
+												<span class="title">Phone:</span>
+												<span class="text">+49892885380</span>
+												<a class="driver-lang">
+													<img src="assets/img/png/call.png" alt="">
+												</a>
+											</div>
+											<div class="item item-reviews">
+												<span class="title">Reviews:</span>
+												<span class="text"> was suprised when i first come to this beautifull and ve... <a href="#" class="more">more</a></span>
+											</div>
+										</div>
+										<div class="col col-1_2">
+											<div class="item">
+												<span class="title">Provider:</span>
+												<span class="text">Google</span>
+											</div>
+											<div class="item">
+												<span class="title">Distance from vehicle:</span>
+												<span class="text">755 m</span>
+											</div>
+											<div class="item item-reviews">
+												<span class="title">Position:</span>
+												<span class="text">N 520 31’ 12.023’’, E 130 24’ 17.834’’, N 52.52, E 13.405</span>
+											</div>
+											<div class="item">
+												<span class="title">Opening hours:</span>
+												<div class="open-hours">
+													<div class="open-hours-day">
+														<div class="open-hours-title">Mon</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Tue</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Wed</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Thu</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Fri</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Sat</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Sun</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="pois-list-item">
+									<div class="pois-list-header">
+										<div class="pois-list-col mr-16">
+											<div class="pois-placeholder">
+												<img src="assets/img/png/placeholder-pois.png" alt="">
+												<span class="pois-placeholder-num">D</span>
+											</div>
+										</div>
+										<div class="pois-list-col">
+											<div class="pois-list-name">Pizza Vapiano</div>
+											<div class="pois-list-adress">Rathausstrasse 6, 10178 Berlin, Germany</div>
+										</div>
+										<div class="pois-list-col mr-48">
+											<div class="icons">
+												<a href="">
+													<img src="assets/img/png/call-d.png" alt="">
+												</a>
+												<div class="pois-status open"></div>
+											</div>
+										</div>
+										<div class="pois-list-col mr-52">
+											<div class="item">
+												<span class="title">Distance:</span>
+												<span class="text">755 m</span>
+											</div>
+										</div>
+										<div class="pois-list-col">
+											<div class="item">
+												<span class="title">Provider:</span>
+												<span class="text">Google</span>
+											</div>
+										</div>
+										<div class="icons ml-auto">
+											<a href="#" class="add-poi">
+												<img src="assets/img/png/add-poi.png" alt="">
+											</a>
+											<a href="#" class="car-poi">
+												<img src="assets/img/png/car-poi.png" alt="">
+											</a>
+											<a href="#" class="way-poi">
+												<img src="assets/img/png/way-poi.png" alt="">
+											</a>
+											<a href="#" class="flag-poi-test">
+												<img src="assets/img/png/flag.png" alt="">
+											</a>
+										</div>
+									</div>
+									<div class="pois-list-content">
+										<div class="col col-1_2">
+											<div class="item">
+												<span class="title">URL:</span>
+												<span class="text">https://pizzavapiano.de</span>
+											</div>
+											<div class="item">
+												<span class="title">Rating:</span>
+												<span class="text"><span class="rating-pois">5.0</span></span>
+											</div>
+											<div class="item">
+												<span class="title">Phone:</span>
+												<span class="text">+49892885380</span>
+												<a class="driver-lang">
+													<img src="assets/img/png/call.png" alt="">
+												</a>
+											</div>
+											<div class="item item-reviews">
+												<span class="title">Reviews:</span>
+												<span class="text"> was suprised when i first come to this beautifull and ve... <a href="#" class="more">more</a></span>
+											</div>
+										</div>
+										<div class="col col-1_2">
+											<div class="item">
+												<span class="title">Provider:</span>
+												<span class="text">Google</span>
+											</div>
+											<div class="item">
+												<span class="title">Distance from vehicle:</span>
+												<span class="text">755 m</span>
+											</div>
+											<div class="item item-reviews">
+												<span class="title">Position:</span>
+												<span class="text">N 520 31’ 12.023’’, E 130 24’ 17.834’’, N 52.52, E 13.405</span>
+											</div>
+											<div class="item">
+												<span class="title">Opening hours:</span>
+												<div class="open-hours">
+													<div class="open-hours-day">
+														<div class="open-hours-title">Mon</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Tue</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Wed</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Thu</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Fri</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Sat</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+													<div class="open-hours-day">
+														<div class="open-hours-title">Sun</div>
+														<div class="open-hours-text">10:00 23:00</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<nav aria-label="Pagination">
+									<ul class="pagination text-center">
+										<li class="pagination-previous"><a href="#"><img src="assets/img/png/arrow-prev.png" alt=""> Previous</a></li>
+										<li class="current">1</li>
+										<li><a href="#" aria-label="Page 2">2</a></li>
+										<li><a href="#" aria-label="Page 3">3</a></li>
+										<li><a href="#" aria-label="Page 4">4</a></li>
+										<li class="pagination-next"><a href="#">Next <img src="assets/img/png/arrow-next.png" alt=""></a></li>
 									</ul>
 								</nav>
 							</div>
@@ -1435,7 +2505,7 @@
 
 	<div class="overlay">
 		<div id="creatPoi" class="modal">
-			<div class="modal-close"><img src="{%F:ARES%}img/png/close-d.png" alt=""></div>
+			<div class="modal-close"><img src="assets/img/png/close-d.png" alt=""></div>
 			<div class="modal-name">Create Points Of Interest</div>
 			<div class="tabs-small">
 				<ul class="tabs" data-deep-link="true" data-update-history="true" data-deep-link-smudge="true" data-deep-link-smudge-delay="500" data-tabs id="deeplinked-tabs">
@@ -1446,7 +2516,7 @@
 				</ul>
 				<div class="tabs-content" data-tabs-content="deeplinked-tabs">
 				    <div class="tabs-panel is-active" id="form-no-position-modal">
-				    	<form class="form" id="createPOIForm">
+				    	<form class="form">
 				    		<div class="form-row mb-18">
 				    			<label for="">POI Position:</label>
 				    			<input class="now-posiotion" type="text" disabled>
@@ -1459,31 +2529,31 @@
 				    			<div class="col mr-44">
 				    				<div class="form-item">
 				    					<label for="">Name:</label>
-					    				<input name="Name" type="text" maxlength="100">
+					    				<input type="text" maxlength="100">
 					    				<div class="form-item-count"><span>0</span>/100</div>
 				    				</div>
 				    				<div class="form-item">
 				    					<label for="">Street:</label>
-					    				<input name="POI.street" type="text" maxlength="100">
+					    				<input type="text" maxlength="100">
 					    				<div class="form-item-count"><span>0</span>/100</div>
 				    				</div>
 				    				<div class="form-item">
 				    					<label for="">City/town or postal code:</label>
-					    				<input name="POI.city" type="text" maxlength="100">
+					    				<input type="text" maxlength="100">
 					    				<div class="form-item-count"><span>0</span>/100</div>
 				    				</div>
 				    				<div class="form-item">
 				    					<label for="">Country/ or state:</label>
-					    				<input name="POI.country" type="text" maxlength="100">
+					    				<input type="text" maxlength="100">
 					    				<div class="form-item-count"><span>0</span>/100</div>
 				    				</div>
 				    				<div class="form-item">
 				    					<label for="">Latitude:</label>
-					    				<input name="POI.lat" type="text" maxlength="100">
+					    				<input type="text" maxlength="100">
 				    				</div>
 				    				<div class="form-item">
 				    					<label for="">Longtitude:</label>
-					    				<input  name="POI.lon" type="text" maxlength="100">					    				
+					    				<input type="text" maxlength="100">
 				    				</div>
 				    			</div>
 				    			<div class="col">
@@ -1492,9 +2562,10 @@
 				    					<select name="" id="" class="mr-8">
 				    						<option value="Unknown">Unknown</option>
 				    						<option value="Unknown">Unknown</option>
-				    						
+				    						<option value="Unknown">Unknown</option>
+				    						<option value="Unknown">Unknown</option>
 				    					</select>
-					    				<input  name="POI.phone1"  type="text" maxlength="100">
+					    				<input type="text" maxlength="100">
 					    				<div class="form-item-count"><span>0</span>/100</div>
 				    				</div>
 				    				<div class="form-item">
@@ -1502,9 +2573,10 @@
 				    					<select name="" id="" class="mr-8">
 				    						<option value="Unknown">Unknown</option>
 				    						<option value="Unknown">Unknown</option>
-				    						
+				    						<option value="Unknown">Unknown</option>
+				    						<option value="Unknown">Unknown</option>
 				    					</select>
-					    				<input name="POI.phone2" type="text" maxlength="100">
+					    				<input type="text" maxlength="100">
 					    				<div class="form-item-count"><span>0</span>/100</div>
 				    				</div>
 				    				<div class="form-item">
@@ -1512,23 +2584,24 @@
 				    					<select name="" id="" class="mr-8">
 				    						<option value="Unknown">Unknown</option>
 				    						<option value="Unknown">Unknown</option>
-				    						
+				    						<option value="Unknown">Unknown</option>
+				    						<option value="Unknown">Unknown</option>
 				    					</select>
-					    				<input name="POI.phone3" type="text" maxlength="100">
+					    				<input type="text" maxlength="100">
 					    				<div class="form-item-count"><span>0</span>/100</div>
 				    				</div>
 				    				<div class="form-item">
 				    					<label for="">URL:</label>
-					    				<input name="POI.url" type="text" maxlength="100">
+					    				<input type="text" maxlength="100">
 				    				</div>
 				    				<div class="form-item">
 				    					<label for="">Email:</label>
-					    				<input name="POI.email" type="text" maxlength="100">
+					    				<input type="text" maxlength="100">
 					    				<div class="form-item-count"><span>0</span>/100</div>
 				    				</div>
 				    				<div class="form-item">
 				    					<label for="">Free text:</label>
-					    				<textarea name="POI.text" maxlength="512"></textarea>
+					    				<textarea maxlength="512"></textarea>
 					    				<div class="form-item-count"><span>0</span>/512</div>
 				    				</div>
 				    			</div>
@@ -1609,7 +2682,8 @@
 				    					<select name="" id="" class="mr-8">
 				    						<option value="Unknown">Unknown</option>
 				    						<option value="Unknown">Unknown</option>
-				    					
+				    						<option value="Unknown">Unknown</option>
+				    						<option value="Unknown">Unknown</option>
 				    					</select>
 					    				<input type="text" maxlength="100">
 					    				<div class="form-item-count"><span>0</span>/100</div>
@@ -1619,7 +2693,8 @@
 				    					<select name="" id="" class="mr-8">
 				    						<option value="Unknown">Unknown</option>
 				    						<option value="Unknown">Unknown</option>
-				    						
+				    						<option value="Unknown">Unknown</option>
+				    						<option value="Unknown">Unknown</option>
 				    					</select>
 					    				<input type="text" maxlength="100">
 					    				<div class="form-item-count"><span>0</span>/100</div>
@@ -1704,7 +2779,9 @@
 				    					<label for="">Phone 1:</label>
 				    					<select name="" id="" class="mr-8">
 				    						<option value="Unknown">Unknown</option>
-				    					
+				    						<option value="Unknown">Unknown</option>
+				    						<option value="Unknown">Unknown</option>
+				    						<option value="Unknown">Unknown</option>
 				    					</select>
 					    				<input type="text" maxlength="100">
 					    				<div class="form-item-count"><span>0</span>/100</div>
@@ -1713,7 +2790,9 @@
 				    					<label for="">Phone 2:</label>
 				    					<select name="" id="" class="mr-8">
 				    						<option value="Unknown">Unknown</option>
-				    					
+				    						<option value="Unknown">Unknown</option>
+				    						<option value="Unknown">Unknown</option>
+				    						<option value="Unknown">Unknown</option>
 				    					</select>
 					    				<input type="text" maxlength="100">
 					    				<div class="form-item-count"><span>0</span>/100</div>
@@ -1722,7 +2801,9 @@
 				    					<label for="">Phone 3:</label>
 				    					<select name="" id="" class="mr-8">
 				    						<option value="Unknown">Unknown</option>
-				    					
+				    						<option value="Unknown">Unknown</option>
+				    						<option value="Unknown">Unknown</option>
+				    						<option value="Unknown">Unknown</option>
 				    					</select>
 					    				<input type="text" maxlength="100">
 					    				<div class="form-item-count"><span>0</span>/100</div>
@@ -1807,7 +2888,9 @@
 				    					<label for="">Phone 1:</label>
 				    					<select name="" id="" class="mr-8">
 				    						<option value="Unknown">Unknown</option>
-				    					
+				    						<option value="Unknown">Unknown</option>
+				    						<option value="Unknown">Unknown</option>
+				    						<option value="Unknown">Unknown</option>
 				    					</select>
 					    				<input type="text" maxlength="100">
 					    				<div class="form-item-count"><span>0</span>/100</div>
@@ -1816,7 +2899,9 @@
 				    					<label for="">Phone 2:</label>
 				    					<select name="" id="" class="mr-8">
 				    						<option value="Unknown">Unknown</option>
-				    					
+				    						<option value="Unknown">Unknown</option>
+				    						<option value="Unknown">Unknown</option>
+				    						<option value="Unknown">Unknown</option>
 				    					</select>
 					    				<input type="text" maxlength="100">
 					    				<div class="form-item-count"><span>0</span>/100</div>
@@ -1825,7 +2910,9 @@
 				    					<label for="">Phone 3:</label>
 				    					<select name="" id="" class="mr-8">
 				    						<option value="Unknown">Unknown</option>
-				    					
+				    						<option value="Unknown">Unknown</option>
+				    						<option value="Unknown">Unknown</option>
+				    						<option value="Unknown">Unknown</option>
 				    					</select>
 					    				<input type="text" maxlength="100">
 					    				<div class="form-item-count"><span>0</span>/100</div>
@@ -1869,92 +2956,90 @@
 		</div>
 
 		<div id="editPoi" class="modal">
-			<div class="modal-close"><img src="{%F:ARES%}img/png/close-d.png" alt=""></div>
+			<div class="modal-close"><img src="assets/img/png/close-d.png" alt=""></div>
 			<div class="modal-name">Edit Points Of Interest</div>
 			<div class="tabs-small">
 			    <div class="tabs-panel is-active" id="form-no-position-modal">
-			    	<form class="form" id="editPOIForm">
+			    	<form class="form">
 			    		<div class="col-row modal-row">
 			    			<div class="col mr-44">
-			    				
-								<div class="form-item">
-				    					<label for="">Name:</label>
-					    				<input name="Name" type="text" maxlength="100">
-					    				<div class="form-item-count"><span>0</span>/100</div>
-				    				</div>
-				    				<div class="form-item">
-				    					<label for="">Street:</label>
-					    				<input name="POI.street" type="text" maxlength="100">
-					    				<div class="form-item-count"><span>0</span>/100</div>
-				    				</div>
-				    				<div class="form-item">
-				    					<label for="">City/town or postal code:</label>
-					    				<input name="POI.city" type="text" maxlength="100">
-					    				<div class="form-item-count"><span>0</span>/100</div>
-				    				</div>
-				    				<div class="form-item">
-				    					<label for="">Country/ or state:</label>
-					    				<input name="POI.country" type="text" maxlength="100">
-					    				<div class="form-item-count"><span>0</span>/100</div>
-				    				</div>
-				    				<div class="form-item">
-				    					<label for="">Latitude:</label>
-					    				<input name="POI.lat" type="text" maxlength="100">
-				    				</div>
-				    				<div class="form-item">
-				    					<label for="">Longtitude:</label>
-					    				<input  name="POI.lon" type="text" maxlength="100">					    				
-				    			</div>
-								
-								
+			    				<div class="form-item">
+			    					<label for="">Name:</label>
+				    				<input type="text" maxlength="100">
+				    				<div class="form-item-count"><span>0</span>/100</div>
+			    				</div>
+			    				<div class="form-item">
+			    					<label for="">Street:</label>
+				    				<input type="text" maxlength="100">
+				    				<div class="form-item-count"><span>0</span>/100</div>
+			    				</div>
+			    				<div class="form-item">
+			    					<label for="">City/town or postal code:</label>
+				    				<input type="text" maxlength="100">
+				    				<div class="form-item-count"><span>0</span>/100</div>
+			    				</div>
+			    				<div class="form-item">
+			    					<label for="">Country/ or state:</label>
+				    				<input type="text" maxlength="100">
+				    				<div class="form-item-count"><span>0</span>/100</div>
+			    				</div>
+			    				<div class="form-item">
+			    					<label for="">Latitude:</label>
+				    				<input type="text" maxlength="100">
+			    				</div>
+			    				<div class="form-item">
+			    					<label for="">Longtitude:</label>
+				    				<input type="text" maxlength="100">
+			    				</div>
 			    			</div>
 			    			<div class="col">
-							
-			    					<div class="form-item">
-				    					<label for="">Phone 1:</label>
-				    					<select name="" id="" class="mr-8">
-				    						<option value="Unknown">Unknown</option>
-				    						<option value="Unknown">Unknown</option>
-				    						
-				    					</select>
-					    				<input  name="POI.phone1"  type="text" maxlength="100">
-					    				<div class="form-item-count"><span>0</span>/100</div>
-				    				</div>
-				    				<div class="form-item">
-				    					<label for="">Phone 2:</label>
-				    					<select name="" id="" class="mr-8">
-				    						<option value="Unknown">Unknown</option>
-				    						<option value="Unknown">Unknown</option>
-				    						
-				    					</select>
-					    				<input name="POI.phone2" type="text" maxlength="100">
-					    				<div class="form-item-count"><span>0</span>/100</div>
-				    				</div>
-				    				<div class="form-item">
-				    					<label for="">Phone 3:</label>
-				    					<select name="" id="" class="mr-8">
-				    						<option value="Unknown">Unknown</option>
-				    						<option value="Unknown">Unknown</option>
-				    						
-				    					</select>
-					    				<input name="POI.phone3" type="text" maxlength="100">
-					    				<div class="form-item-count"><span>0</span>/100</div>
-				    				</div>
-				    				<div class="form-item">
-				    					<label for="">URL:</label>
-					    				<input name="POI.url" type="text" maxlength="100">
-				    				</div>
-				    				<div class="form-item">
-				    					<label for="">Email:</label>
-					    				<input name="POI.email" type="text" maxlength="100">
-					    				<div class="form-item-count"><span>0</span>/100</div>
-				    				</div>
-				    				<div class="form-item">
-				    					<label for="">Free text:</label>
-					    				<textarea name="POI.text" maxlength="512"></textarea>
-					    				<div class="form-item-count"><span>0</span>/512</div>
-				    				</div>
-									
+			    				<div class="form-item">
+			    					<label for="">Phone 1:</label>
+			    					<select name="" id="" class="mr-8">
+			    						<option value="Unknown">Unknown</option>
+			    						<option value="Unknown">Unknown</option>
+			    						<option value="Unknown">Unknown</option>
+			    						<option value="Unknown">Unknown</option>
+			    					</select>
+				    				<input type="text" maxlength="100">
+				    				<div class="form-item-count"><span>0</span>/100</div>
+			    				</div>
+			    				<div class="form-item">
+			    					<label for="">Phone 2:</label>
+			    					<select name="" id="" class="mr-8">
+			    						<option value="Unknown">Unknown</option>
+			    						<option value="Unknown">Unknown</option>
+			    						<option value="Unknown">Unknown</option>
+			    						<option value="Unknown">Unknown</option>
+			    					</select>
+				    				<input type="text" maxlength="100">
+				    				<div class="form-item-count"><span>0</span>/100</div>
+			    				</div>
+			    				<div class="form-item">
+			    					<label for="">Phone 3:</label>
+			    					<select name="" id="" class="mr-8">
+			    						<option value="Unknown">Unknown</option>
+			    						<option value="Unknown">Unknown</option>
+			    						<option value="Unknown">Unknown</option>
+			    						<option value="Unknown">Unknown</option>
+			    					</select>
+				    				<input type="text" maxlength="100">
+				    				<div class="form-item-count"><span>0</span>/100</div>
+			    				</div>
+			    				<div class="form-item">
+			    					<label for="">URL:</label>
+				    				<input type="text" maxlength="100">
+			    				</div>
+			    				<div class="form-item">
+			    					<label for="">Email:</label>
+				    				<input type="text" maxlength="100">
+				    				<div class="form-item-count"><span>0</span>/100</div>
+			    				</div>
+			    				<div class="form-item">
+			    					<label for="">Free text:</label>
+				    				<textarea maxlength="512"></textarea>
+				    				<div class="form-item-count"><span>0</span>/512</div>
+			    				</div>
 			    			</div>
 			    		</div>
 			    		<div class="flex align-justify align-middle mt-16">
@@ -1970,7 +3055,7 @@
 			    			</div>
 							<div class="btns mr-48">
 								<a href="#" class="btn btn-color-grey  mr-8 modal-cancel">Cancel</a>
-								<a href="#" class="btn btn-color-dark_grey creatPoi-save-edited">Save</a>
+								<a href="#" class="btn btn-color-dark_grey creatPoi-save">Save</a>
 							</div>
 			    		</div>
 			    	</form>
@@ -1979,9 +3064,9 @@
 		</div>
 
 		<div id="manageFavorites" class="modal">
-			<div class="modal-close"><img src="{%F:ARES%}img/png/close-d.png" alt=""></div>
-			<div class="modal-name">Manage favorites</div>
-			<form id="form-manage-favorite" class="tabs-modal">
+			<div class="modal-close"><img src="assets/img/png/close-d.png" alt=""></div>
+			<div class="modal-name">Manage Favorites</div>
+			<div class="tabs-modal">
 				<ul class="tabs" data-deep-link="true" data-update-history="true" data-deep-link-smudge="true" data-deep-link-smudge-delay="500" data-tabs id="modal-tabs">
 					<li class="tabs-title is-active"><a href="#add-favorites-modal">Add search filter to favorites</a></li>
 					<li class="tabs-title " aria-selected="true"><a href="#edit-delete-modal">Edit/Delete favorites</a></li>
@@ -1995,7 +3080,7 @@
 				    					<input type="checkbox">
 				    					<span></span>
 				    				</div>
-				    				<img src="{%F:ARES%}img/png/icons/restr.png" alt="">
+				    				<img src="assets/img/png/icons/restr.png" alt="">
 				    				<div class="filter-name">restaurant/cafe</div>
 				    			</div>
 				    			<div class="filter-item">
@@ -2003,7 +3088,7 @@
 				    					<input type="checkbox">
 				    					<span></span>
 				    				</div>
-				    				<img src="{%F:ARES%}img/png/icons/avia.png" alt="">
+				    				<img src="assets/img/png/icons/avia.png" alt="">
 				    				<div class="filter-name">travel</div>
 				    			</div>
 				    			<div class="filter-item">
@@ -2011,7 +3096,7 @@
 				    					<input type="checkbox">
 				    					<span></span>
 				    				</div>
-				    				<img src="{%F:ARES%}img/png/icons/theatre.png" alt="">
+				    				<img src="assets/img/png/icons/theatre.png" alt="">
 				    				<div class="filter-name">theatre</div>
 				    			</div>
 				    			<div class="filter-item">
@@ -2019,7 +3104,7 @@
 				    					<input type="checkbox">
 				    					<span></span>
 				    				</div>
-				    				<img src="{%F:ARES%}img/png/icons/shopping.png" alt="">
+				    				<img src="assets/img/png/icons/shopping.png" alt="">
 				    				<div class="filter-name">shopping</div>
 				    			</div>
 				    			<div class="filter-item">
@@ -2027,7 +3112,7 @@
 				    					<input type="checkbox">
 				    					<span></span>
 				    				</div>
-				    				<img src="{%F:ARES%}img/png/icons/museum.png" alt="">
+				    				<img src="assets/img/png/icons/museum.png" alt="">
 				    				<div class="filter-name">museum</div>
 				    			</div>
 				    			<div class="filter-item">
@@ -2035,7 +3120,7 @@
 				    					<input type="checkbox">
 				    					<span></span>
 				    				</div>
-				    				<img src="{%F:ARES%}img/png/icons/groceries.png" alt="">
+				    				<img src="assets/img/png/icons/groceries.png" alt="">
 				    				<div class="filter-name">groceries</div>
 				    			</div>
 				    		</div>
@@ -2045,7 +3130,7 @@
 				    					<input type="checkbox">
 				    					<span></span>
 				    				</div>
-				    				<img src="{%F:ARES%}img/png/icons/garage.png" alt="">
+				    				<img src="assets/img/png/icons/garage.png" alt="">
 				    				<div class="filter-name">garage/workshop/repair</div>
 				    			</div>
 				    			<div class="filter-item">
@@ -2053,7 +3138,7 @@
 				    					<input type="checkbox">
 				    					<span></span>
 				    				</div>
-				    				<img src="{%F:ARES%}img/png/icons/beach.png" alt="">
+				    				<img src="assets/img/png/icons/beach.png" alt="">
 				    				<div class="filter-name">beach</div>
 				    			</div>
 				    			<div class="filter-item">
@@ -2061,7 +3146,7 @@
 				    					<input type="checkbox">
 				    					<span></span>
 				    				</div>
-				    				<img src="{%F:ARES%}img/png/icons/tourist.png" alt="">
+				    				<img src="assets/img/png/icons/tourist.png" alt="">
 				    				<div class="filter-name">tourist Information</div>
 				    			</div>
 				    			<div class="filter-item">
@@ -2069,7 +3154,7 @@
 				    					<input type="checkbox">
 				    					<span></span>
 				    				</div>
-				    				<img src="{%F:ARES%}img/png/icons/sightseeing.png" alt="">
+				    				<img src="assets/img/png/icons/sightseeing.png" alt="">
 				    				<div class="filter-name">sightseeing</div>
 				    			</div>
 				    			<div class="filter-item">
@@ -2077,7 +3162,7 @@
 				    					<input type="checkbox">
 				    					<span></span>
 				    				</div>
-				    				<img src="{%F:ARES%}img/png/icons/station.png" alt="">
+				    				<img src="assets/img/png/icons/station.png" alt="">
 				    				<div class="filter-name">gas station</div>
 				    			</div>
 				    			<div class="filter-item">
@@ -2085,69 +3170,270 @@
 				    					<input type="checkbox">
 				    					<span></span>
 				    				</div>
-				    				<img src="{%F:ARES%}img/png/icons/cash.png" alt="">
+				    				<img src="assets/img/png/icons/cash.png" alt="">
 				    				<div class="filter-name">cash machine</div>
 				    			</div>
 				    		</div>
 				    		<div class="col col-3_7 manager">
 				    			<div class="form-item">
 			    					<label for="">Favorite name:</label>
-			    					<input name="favorite_favoriteName" type="text">
+			    					<input type="text">
 			    				</div>
 			    				<div class="form-item">
 			    					<label for="">Search type:</label>
-			    					<select name="favorite_searchType" id="">
+			    					<select name="" id="">
 			    						<option value="By map">By map</option>
-										<option value="By map1">By map1</option>
-										<option value="By map2">By map2</option>
-										<option value="By map3">By map3</option>
+			    						<option value="By map">By map</option>
+			    						<option value="By map">By map</option>
+			    						<option value="By map">By map</option>
 			    					</select>
 			    				</div>
 			    				<div class="form-item">
 			    					<label for="">Language:</label>
-			    					<select name="favorite_language" id="">
+			    					<select name="" id="">
 			    						<option value="English">English</option>
-										<option value="German">German</option>
-										<option value="China">China</option>
-										<option value="Spain">Spain</option>
+			    						<option value="English">English</option>
+			    						<option value="English">English</option>
+			    						<option value="English">English</option>
 			    					</select>
 			    				</div>
 			    				<div class="form-item">
 			    					<label for="">What:</label>
-			    					<input  name="favorite_what" type="text">
+			    					<input type="text">
 			    				</div>
 			    				<div class="form-item">
 			    					<label for="">Category:</label>
-			    					<select name="favorite_category" id="" multiple>
-										<option value="BMW Service Partner">BMW Service Partner</option>
-										<option value="BMW Retailers">BMW Retailers</option>
-										<option value="School">School</option>
-										<option value="ATM">ATM</option>
-										<option value="Bank">Bank</option>
-										<option value="Public Parking">Public Parking</option>
-										<option value="Pharmacy">Pharmacy</option>
-										<option value="Medical Services">Medical Services</option>
+			    					<select name="" id="">
 			    						<option value="Restaurants">Restaurants</option>
-			    						<option value="Named Place">Named Place</option>
-			    						<option value="German Food">German Food</option>
-			    						<option value="Speciality Store">Speciality Store</option>
+			    						<option value="Restaurants">Restaurants</option>
+			    						<option value="Restaurants">Restaurants</option>
+			    						<option value="Restaurants">Restaurants</option>
 			    					</select>
 			    				</div>
 				    		</div>
 				    	</div>
 				    	<div class="flex align-justify align-middle mt-16">
 				    		<div class="items">
-								<a href="#" id="btn-favorites-copy" class="btn btn-color-blue">Copy data from search form</a>
+								<a href="#" class="btn btn-color-blue">Copy data from search form</a>
 			    			</div>
 							<div class="btns">
-								<a href="#" class="btn btn-color-dark_grey mr-8" id="form-manage-favorite-submit">Submit</a>
+								<a href="#" class="btn btn-color-dark_grey mr-8">Submit</a>
 								<a href="#" class="btn btn-color-grey modal-cancel">Cancel</a>
 							</div>
 						</div>
 				    </div>
 				    <div class="tabs-panel" id="edit-delete-modal">
-				    	<div id="favorites-items" class="col-row" >
-				    		
+				    	<div class="col-row">
+				    		<div class="col col-1_3">
+				    			<div class="favorites-modal-item">
+				    				<div class="favorites-modal-icons icons">
+				    					<a href="#" class="edit-favorites">
+											<img src="assets/img/png/edit.png" alt="">
+										</a>
+										<a href="#" class="close-favorites">
+											<img src="assets/img/png/close.png" alt="">
+										</a>
+				    				</div>
+				    				<div class="favorites-modal-icon">
+				    					<img src="assets/img/png/icons/restr.png" alt="">
+				    				</div>
+				    				<div class="item">
+										<span class="title">Favorite name:</span>
+										<span class="text favorites-names">Sports pubs</span>
+									</div>
+									<div class="item">
+										<span class="title">Search type:</span>
+										<span class="text">By map</span>
+									</div>
+									<div class="item">
+										<span class="title">Language:</span>
+										<span class="text">EN</span>
+									</div>
+									<div class="item">
+										<span class="title">What:</span>
+										<span class="text">Champions Sportsbar</span>
+									</div>
+									<div class="item">
+										<span class="title">Category:</span>
+										<span class="text">Restaurants</span>
+									</div>
+				    			</div>
+				    		</div>
+				    		<div class="col col-1_3">
+				    			<div class="favorites-modal-item">
+				    				<div class="favorites-modal-icons icons">
+				    					<a href="#" class="edit-favorites">
+											<img src="assets/img/png/edit.png" alt="">
+										</a>
+										<a href="#" class="close-favorites">
+											<img src="assets/img/png/close.png" alt="">
+										</a>
+				    				</div>
+				    				<div class="favorites-modal-icon">
+				    					<img src="assets/img/png/icons/restr.png" alt="">
+				    				</div>
+				    				<div class="item">
+										<span class="title">Favorite name:</span>
+										<span class="text favorites-names">Sports pubs</span>
+									</div>
+									<div class="item">
+										<span class="title">Search type:</span>
+										<span class="text">By map</span>
+									</div>
+									<div class="item">
+										<span class="title">Language:</span>
+										<span class="text">EN</span>
+									</div>
+									<div class="item">
+										<span class="title">What:</span>
+										<span class="text">Champions Sportsbar</span>
+									</div>
+									<div class="item">
+										<span class="title">Category:</span>
+										<span class="text">Restaurants</span>
+									</div>
+				    			</div>
+				    		</div>
+				    		<div class="col col-1_3">
+				    			<div class="favorites-modal-item">
+				    				<div class="favorites-modal-icons icons">
+				    					<a href="#" class="edit-favorites">
+											<img src="assets/img/png/edit.png" alt="">
+										</a>
+										<a href="#" class="close-favorites">
+											<img src="assets/img/png/close.png" alt="">
+										</a>
+				    				</div>
+				    				<div class="favorites-modal-icon">
+				    					<img src="assets/img/png/icons/restr.png" alt="">
+				    				</div>
+				    				<div class="item">
+										<span class="title">Favorite name:</span>
+										<span class="text favorites-names">Sports pubs</span>
+									</div>
+									<div class="item">
+										<span class="title">Search type:</span>
+										<span class="text">By map</span>
+									</div>
+									<div class="item">
+										<span class="title">Language:</span>
+										<span class="text">EN</span>
+									</div>
+									<div class="item">
+										<span class="title">What:</span>
+										<span class="text">Champions Sportsbar</span>
+									</div>
+									<div class="item">
+										<span class="title">Category:</span>
+										<span class="text">Restaurants</span>
+									</div>
+				    			</div>
+				    		</div>
+				    		<div class="col col-1_3">
+				    			<div class="favorites-modal-item">
+				    				<div class="favorites-modal-icons icons">
+				    					<a href="#" class="edit-favorites">
+											<img src="assets/img/png/edit.png" alt="">
+										</a>
+										<a href="#" class="close-favorites">
+											<img src="assets/img/png/close.png" alt="">
+										</a>
+				    				</div>
+				    				<div class="favorites-modal-icon">
+				    					<img src="assets/img/png/icons/restr.png" alt="">
+				    				</div>
+				    				<div class="item">
+										<span class="title">Favorite name:</span>
+										<span class="text favorites-names">Sports pubs</span>
+									</div>
+									<div class="item">
+										<span class="title">Search type:</span>
+										<span class="text">By map</span>
+									</div>
+									<div class="item">
+										<span class="title">Language:</span>
+										<span class="text">EN</span>
+									</div>
+									<div class="item">
+										<span class="title">What:</span>
+										<span class="text">Champions Sportsbar</span>
+									</div>
+									<div class="item">
+										<span class="title">Category:</span>
+										<span class="text">Restaurants</span>
+									</div>
+				    			</div>
+				    		</div>
+				    		<div class="col col-1_3">
+				    			<div class="favorites-modal-item">
+				    				<div class="favorites-modal-icons icons">
+				    					<a href="#" class="edit-favorites">
+											<img src="assets/img/png/edit.png" alt="">
+										</a>
+										<a href="#" class="close-favorites">
+											<img src="assets/img/png/close.png" alt="">
+										</a>
+				    				</div>
+				    				<div class="favorites-modal-icon">
+				    					<img src="assets/img/png/icons/restr.png" alt="">
+				    				</div>
+				    				<div class="item">
+										<span class="title">Favorite name:</span>
+										<span class="text favorites-names">Sports pubs</span>
+									</div>
+									<div class="item">
+										<span class="title">Search type:</span>
+										<span class="text">By map</span>
+									</div>
+									<div class="item">
+										<span class="title">Language:</span>
+										<span class="text">EN</span>
+									</div>
+									<div class="item">
+										<span class="title">What:</span>
+										<span class="text">Champions Sportsbar</span>
+									</div>
+									<div class="item">
+										<span class="title">Category:</span>
+										<span class="text">Restaurants</span>
+									</div>
+				    			</div>
+				    		</div>
+				    		<div class="col col-1_3">
+				    			<div class="favorites-modal-item">
+				    				<div class="favorites-modal-icons icons">
+				    					<a href="#" class="edit-favorites">
+											<img src="assets/img/png/edit.png" alt="">
+										</a>
+										<a href="#" class="close-favorites">
+											<img src="assets/img/png/close.png" alt="">
+										</a>
+				    				</div>
+				    				<div class="favorites-modal-icon">
+				    					<img src="assets/img/png/icons/restr.png" alt="">
+				    				</div>
+				    				<div class="item">
+										<span class="title">Favorite name:</span>
+										<span class="text favorites-names">Sports pubs</span>
+									</div>
+									<div class="item">
+										<span class="title">Search type:</span>
+										<span class="text">By map</span>
+									</div>
+									<div class="item">
+										<span class="title">Language:</span>
+										<span class="text">EN</span>
+									</div>
+									<div class="item">
+										<span class="title">What:</span>
+										<span class="text">Champions Sportsbar</span>
+									</div>
+									<div class="item">
+										<span class="title">Category:</span>
+										<span class="text">Restaurants</span>
+									</div>
+				    			</div>
+				    		</div>
 				    	</div>
 						<div class="flex align-right align-middle mt-16">
 							<div class="btns">
@@ -2156,18 +3442,17 @@
 						</div>
 				    </div>
 				</div>
-			</form>
+			</div>
 		</div>
 	</div>
 
 	<div class="overlay-top">
 		<div id="success" class="modal">
-			<!-- <div class="modal-close"><img src="{%F:ARES%}img/png/close-d.png" alt=""></div> -->
+			<!-- <div class="modal-close"><img src="assets/img/png/close-d.png" alt=""></div> -->
 			<div class="modal-title mb-34">Successfully sent to vehicle!</div>
 			<a href="#" class="btn btn-color-grey">OK</a>
 		</div>
 
-		
 		<div id="successHistory" class="modal">
 			<!-- <div class="modal-close"><img src="assets/img/png/close-d.png" alt=""></div> -->
 			<div class="modal-title mb-34">Successfully resent to vehicle!</div>
@@ -2177,11 +3462,11 @@
 		<div id="reportSuccess" class="modal">
 			<!-- <div class="modal-close"><img src="assets/img/png/close-d.png" alt=""></div> -->
 			<div class="modal-title mb-34">Report has been successfully filed!</div>
-			<a href="#" class="btn btn-color-grey">OK</a>
+			<a id="reportSuccessDone" href="#" class="btn btn-color-grey">OK</a>
 		</div>
 
 		<div id="removeFavorites" class="modal">
-			<div class="modal-close"><img src="{%F:ARES%}img/png/close-d.png" alt=""></div>
+			<div class="modal-close"><img src="assets/img/png/close-d.png" alt=""></div>
 			<div class="modal-name">Remove POI</div>
 			<div class="modal-title mb-34">Do you want to remove '<span></span>'</div>
 			<div class="flex-row">
@@ -2191,7 +3476,7 @@
 		</div>
 
 		<div id="closeCall" class="modal ">
-			<div class="modal-close"><img src="{%F:ARES%}img/png/close-d.png" alt=""></div>
+			<div class="modal-close"><img src="assets/img/png/close-d.png" alt=""></div>
 			<div class="modal-name">Please confirm</div>
 			<div class="modal-title mb-34">Do you want to close the call?</div>
 			<div class="flex-row">
@@ -2201,7 +3486,7 @@
 		</div>
 
 		<div id="closeCallMore" class="modal">
-			<div class="modal-close"><img src="{%F:ARES%}img/png/close-d.png" alt=""></div>
+			<div class="modal-close"><img src="assets/img/png/close-d.png" alt=""></div>
 			<div class="modal-name">Please confirm</div>
 			<div class="modal-pretitle">POIs to be sent:  '<span class="countPois"></span>'</div>
 			<div class="modal-title mb-34">Do you want to close the call and send POIs?</div>
@@ -2212,27 +3497,17 @@
 		</div>
 
 		<div id="deleteFavorites" class="modal">
-			<div class="modal-close"><img src="{%F:ARES%}img/png/close-d.png" alt=""></div>
+			<div class="modal-close"><img src="assets/img/png/close-d.png" alt=""></div>
 			<div class="modal-name">Delete Favorites</div>
-			<div class="modal-title mb-34">Do you want to remove '<span class="modal-title-span"></span>'</div>
+			<div class="modal-title mb-34">Do you want to remove '<span></span>'</div>
 			<div class="flex-row">
 				<a href="#" class="btn btn-color-dark_grey mr-8 deleteFavorites">Delete</a>
 				<a href="#" class="btn btn-color-grey modal-cancel">Cancel</a>
 			</div>
 		</div>
 
-		<div id="confirmEditFavorites" class="modal modal-edit-favorite">
-			<div class="modal-close"><img src="{%F:ARES%}img/png/close-d.png" alt=""></div>
-			<div class="modal-name">Edit Favorites</div>
-			<div class="modal-title mb-34">Do you want to edit '<span class="modal-title-span"></span>'</div>
-			<div class="flex-row">
-				<a href="#" class="btn btn-color-dark_grey mr-8 confirmEditFavorites">Edit</a>
-				<a href="#" class="btn btn-color-grey modal-cancel">Cancel</a>
-			</div>
-		</div>
-
-		<form id="editFavorites" class="modal">
-			<div class="modal-close"><img src="{%F:ARES%}img/png/close-d.png" alt=""></div>
+		<div id="editFavorites" class="modal">
+			<div class="modal-close"><img src="assets/img/png/close-d.png" alt=""></div>
 			<div class="modal-name">Edit Favorites</div>
 			<div class="tabs-modal">
 		    	<div class="col-row">
@@ -2242,7 +3517,7 @@
 		    					<input type="checkbox">
 		    					<span></span>
 		    				</div>
-		    				<img src="{%F:ARES%}img/png/icons/restr.png" id="restr.png" alt="">
+		    				<img src="assets/img/png/icons/restr.png" alt="">
 		    				<div class="filter-name">restaurant/cafe</div>
 		    			</div>
 		    			<div class="filter-item">
@@ -2250,7 +3525,7 @@
 		    					<input type="checkbox">
 		    					<span></span>
 		    				</div>
-		    				<img src="{%F:ARES%}img/png/icons/avia.png" alt="">
+		    				<img src="assets/img/png/icons/avia.png" alt="">
 		    				<div class="filter-name">travel</div>
 		    			</div>
 		    			<div class="filter-item">
@@ -2258,7 +3533,7 @@
 		    					<input type="checkbox">
 		    					<span></span>
 		    				</div>
-		    				<img src="{%F:ARES%}img/png/icons/theatre.png" alt="">
+		    				<img src="assets/img/png/icons/theatre.png" alt="">
 		    				<div class="filter-name">theatre</div>
 		    			</div>
 		    			<div class="filter-item">
@@ -2266,7 +3541,7 @@
 		    					<input type="checkbox">
 		    					<span></span>
 		    				</div>
-		    				<img src="{%F:ARES%}img/png/icons/shopping.png" alt="">
+		    				<img src="assets/img/png/icons/shopping.png" alt="">
 		    				<div class="filter-name">shopping</div>
 		    			</div>
 		    			<div class="filter-item">
@@ -2274,7 +3549,7 @@
 		    					<input type="checkbox">
 		    					<span></span>
 		    				</div>
-		    				<img src="{%F:ARES%}img/png/icons/museum.png" alt="">
+		    				<img src="assets/img/png/icons/museum.png" alt="">
 		    				<div class="filter-name">museum</div>
 		    			</div>
 		    			<div class="filter-item">
@@ -2282,7 +3557,7 @@
 		    					<input type="checkbox">
 		    					<span></span>
 		    				</div>
-		    				<img src="{%F:ARES%}img/png/icons/groceries.png" alt="">
+		    				<img src="assets/img/png/icons/groceries.png" alt="">
 		    				<div class="filter-name">groceries</div>
 		    			</div>
 		    		</div>
@@ -2292,7 +3567,7 @@
 		    					<input type="checkbox">
 		    					<span></span>
 		    				</div>
-		    				<img src="{%F:ARES%}img/png/icons/garage.png" alt="">
+		    				<img src="assets/img/png/icons/garage.png" alt="">
 		    				<div class="filter-name">garage/workshop/repair</div>
 		    			</div>
 		    			<div class="filter-item">
@@ -2300,7 +3575,7 @@
 		    					<input type="checkbox">
 		    					<span></span>
 		    				</div>
-		    				<img src="{%F:ARES%}img/png/icons/beach.png" alt="">
+		    				<img src="assets/img/png/icons/beach.png" alt="">
 		    				<div class="filter-name">beach</div>
 		    			</div>
 		    			<div class="filter-item">
@@ -2308,7 +3583,7 @@
 		    					<input type="checkbox">
 		    					<span></span>
 		    				</div>
-		    				<img src="{%F:ARES%}img/png/icons/tourist.png" alt="">
+		    				<img src="assets/img/png/icons/tourist.png" alt="">
 		    				<div class="filter-name">tourist Information</div>
 		    			</div>
 		    			<div class="filter-item">
@@ -2316,7 +3591,7 @@
 		    					<input type="checkbox">
 		    					<span></span>
 		    				</div>
-		    				<img src="{%F:ARES%}img/png/icons/sightseeing.png" alt="">
+		    				<img src="assets/img/png/icons/sightseeing.png" alt="">
 		    				<div class="filter-name">sightseeing</div>
 		    			</div>
 		    			<div class="filter-item">
@@ -2324,7 +3599,7 @@
 		    					<input type="checkbox">
 		    					<span></span>
 		    				</div>
-		    				<img src="{%F:ARES%}img/png/icons/station.png" alt="">
+		    				<img src="assets/img/png/icons/station.png" alt="">
 		    				<div class="filter-name">gas station</div>
 		    			</div>
 		    			<div class="filter-item">
@@ -2332,490 +3607,75 @@
 		    					<input type="checkbox">
 		    					<span></span>
 		    				</div>
-		    				<img src="{%F:ARES%}img/png/icons/cash.png" alt="">
+		    				<img src="assets/img/png/icons/cash.png" alt="">
 		    				<div class="filter-name">cash machine</div>
 		    			</div>
 		    		</div>
 		    		<div class="col col-3_7 manager">
 		    			<div class="form-item">
 	    					<label for="">Favorite name:</label>
-	    					<input name="favorite_favoriteName" type="text">
+	    					<select name="" id="">
+	    						<option value="Sports pubs">Sports pubs</option>
+	    						<option value="Sports pubs">Sports pubs</option>
+	    						<option value="Sports pubs">Sports pubs</option>
+	    						<option value="Sports pubs">Sports pubs</option>
+	    					</select>
 	    				</div>
 	    				<div class="form-item">
 	    					<label for="">Search type:</label>
-	    					<select name="favorite_searchType" id="">
+	    					<select name="" id="">
 	    						<option value="By map">By map</option>
-	    						<option value="By map1">By map1</option>
-	    						<option value="By map2">By map2</option>
-	    						<option value="By map3">By map3</option>
+	    						<option value="By map">By map</option>
+	    						<option value="By map">By map</option>
+	    						<option value="By map">By map</option>
 	    					</select>
 	    				</div>
 	    				<div class="form-item">
 	    					<label for="">Language:</label>
-	    					<select name="favorite_language" id="" >
+	    					<select name="" id="">
 	    						<option value="English">English</option>
-								<option value="German">German</option>
-								<option value="China">China</option>
-	    						<option value="Spain">Spain</option>
+	    						<option value="English">English</option>
+	    						<option value="English">English</option>
+	    						<option value="English">English</option>
 	    					</select>
 	    				</div>
 	    				<div class="form-item">
 	    					<label for="">What:</label>
-	    					<select name="favorite_what" id="">
+	    					<select name="" id="">
 	    						<option value="Champions Sportsbar">Champions Sportsbar</option>
-								<option value="Hotel">Hotel</option>
-								<option value="Canteen">Canteen</option>
-								<option value="Service station">Service station</option>
-							</select>
+	    						<option value="Champions Sportsbar">Champions Sportsbar</option>
+	    						<option value="Champions Sportsbar">Champions Sportsbar</option>
+	    						<option value="Champions Sportsbar">Champions Sportsbar</option>
+	    					</select>
 	    				</div>
 	    				<div class="form-item">
 	    					<label for="">Category:</label>
-	    					<select name="favorite_category" id=""  multiple>
-								<option value="Restaurant">Restaurant</option>
-								<option value="Named Place">Named Place</option>
-								<option value="German Food">German Food</option>
-								<!-- <option value="Speciality Store">Speciality Store</option> -->
-								<option value="School">School</option>
-								<option value="ATM">ATM</option>
-								
+	    					<select name="" id="">
+	    						<option value="Restaurants">Restaurants</option>
+	    						<option value="Restaurants">Restaurants</option>
+	    						<option value="Restaurants">Restaurants</option>
+	    						<option value="Restaurants">Restaurants</option>
 	    					</select>
 	    				</div>
 		    		</div>
 		    	</div>
 		    	<div class="flex align-right align-middle mt-16">
 					<div class="btns">
-						<a href="#" id="btn-edit-save" class="btn btn-color-dark_grey mr-8" >Save</a>
+						<a href="#" class="btn btn-color-dark_grey mr-8">Save</a>
 						<a href="#" class="btn btn-color-grey modal-cancel">Cancel</a>
 					</div>
 				</div>
 			</div>
-		</form>
+		</div>
 	</div>
 
-	
-	
-	<!--- HANDLE BARS -->
-	<script id="listOfFavoritesHideDetails" type="text/x-handlebars-template">
-	
-		{{#each result}}
-		
-		<div class="favorites-item">
-			<div class="item mr-16">
-				<span class="title">Favorite name:</span>
-				<span class="text">{{favorite_favoriteName}}</span>
-			</div>
-			<div class="item mr-20">
-				<span class="title">Search type:</span>
-				<span class="text">{{favorite_searchType}}</span>
-			</div>
-			<div class="item mr-20">
-				<span class="title">Language:</span>
-				<span class="text">{{favorite_language}}</span>
-			</div>
-			<div class="item mr-20">
-				<span class="title">What:</span>
-				<span class="text">{{favorite_what}}</span>
-			</div>
-			<div class="item mr-20">
-				<span class="title">Category:</span>
-				<span class="text">{{favorite_category}}</span>
-			</div>
-		</div>
-		
-		{{/each}}
-	
-	</script>
-
-	<script id="listOfFavorites" type="text/x-handlebars-template">
-	
-						    			
-	
-			<label class="mr-24" for="">List of favorites:</label>
-			{{#each result}}
-			
-				<div class="flex-row favorites-mini mr-10">
-					<img src="{%F:ARES%}img/png/icons/{{this.favorite_iconType}}" alt="">						    	
-				</div>
-			
-			{{/each}}
-			<a id="manFavorites" href="#" class="btn btn-color-grey">Manage favorites</a>
-		
-	</script>
-	
-	<script id="headerTempl" type="text/x-handlebars-template">
-	 				
-	 					<div class="col col-1_3">
-							<div class="item">
-								<span class="title">Title:</span>
-								<span class="text">Mr</span>
-							</div>
-
-							<div class="item">
-								<span class="title">First name:</span>
-								<span class="text">{{tovarbase_firstname}}</span>
-							</div>
-							<div class="item">
-								<span class="title">Last name:</span>
-								<span class="text">{{tovarbase_lastname}}</span>
-							</div>
-							<div class="item">
-								<span class="title">Phone number:</span>
-								<span class="text">{{tovarbase_phonenumber}}</span>
-							</div>
-							<div class="item">
-								<span class="title">Email:</span>
-								<span class="text">{{tovarbase_email}}</span>
-							</div>
-							<div class="item">
-								<span class="title">Alias:</span>
-								<span class="text">{{tovarbase_alias}}</span>
-							</div>
-
-							<div class="item">
-								<span class="title">Home address:</span>
-								<span class="text">{{tovarbase_homeaddress}}</span>
-							</div>
-							<div class="item">
-								<span class="title">Home town:</span>
-								<span class="text">{{tovarbase_hometown}}</span>
-							</div>
-							<div class="item">
-								<span class="title">Country:</span>
-								<span class="text">{{tovarbase_country}}</span>
-							</div>
-							<div class="item">
-								<span class="title">HMI language:</span>
-								<span class="text" >{{tovarbase_HMIlanguage}}</span>
-							</div>
-							<div class="item">
-								<span class="title">ConnectedDrive username:</span>
-								<span class="text">{{tovarbase_ConnectedDriveusername}}</span>
-							</div>
-						</div>
-						<div class="col col-1_3">
-							<div class="item">
-								<span class="title">Position:</span>
-								<span class="text">{{tovarbase_position}}</span><br>
-								<span class="text">{{tovarbase_lat}}<br>{{tovarbase_lon}}</span>
-							</div>
-							<div class="item">
-								<span class="title">Heading:</span>
-								<span class="text">North (00)</span>
-							</div>
-							<div class="item">
-								<span class="title">Altitude:</span>
-								<span class="text">0m</span>
-							</div>
-						</div>
-						<div class="col col-1_3"></div>				
-	 </script>
-
-	 <script id="vehicleTempl" type="text/x-handlebars-template">
-									<div class="flex">
-										<div class="col col-1_2">
-											<div class="item">
-												<span class="title">Country code:</span>
-												<span class="text">{{car_Countrycode}}</span>
-												<span class="driver-lang">
-													<img src="../_ares/img/png/flags/ger.png" alt="">
-												</span>
-											</div>
-											<div class="item">
-												<span class="title">VIN:</span>
-												<span class="text">{{car_VIN}}</span>
-											</div>
-											<div class="item">
-												<span class="title">License plate:</span>
-												<span class="text">{{car_Licenseplate}}</span>
-											</div>
-											<div class="item">
-												<span class="title">Account group:</span>
-												<span class="text">{{car_Accountgroup}}</span>
-											</div>
-											<div class="item">
-												<span class="title">Products:</span>
-												<span class="text">{{car_Products}}</span>
-											</div>
-											<div class="item">
-												<span class="title">Navigation system:</span>
-												<span class="text">{{car_Navigationsystem}}</span>
-											</div>
-											<div class="item">
-												<span class="title">Device:</span>
-												<span class="text">{{car_Device}}</span>
-											</div>
-											<div class="item">
-												<span class="title">Vehicle phone:</span>
-												<span class="text">{{car_Vehiclephone}}</span>
-												<a class="driver-lang">
-													<img src="../_ares/img/png/call.png" alt="">
-												</a>
-											</div>
-										</div>
-										<div class="col col-1_2">
-											<div class="item">
-												<span class="title">Brand:</span>
-												<span class="text">{{car_Brand}}</span>
-											</div>
-											<div class="item">
-												<span class="title">Series:</span>
-												<span class="text">{{car_Series}}</span>
-											</div>
-											<div class="item">
-												<span class="title">Basic model:</span>
-												<span class="text">{{car_Basicmodel}}</span>
-											</div>
-											<div class="item">
-												<span class="title">Body:</span>
-												<span class="text">{{car_Body}}</span>
-											</div>
-											<div class="item">
-												<span class="title">Model range:</span>
-												<span class="text">{{car_Modelrange}}</span>
-											</div>
-											<div class="item">
-												<span class="title">Model key:</span>
-												<span class="text">{{car_Modelkey}}</span>
-											</div>
-											<div class="item">
-												<span class="title">Production date:</span>
-												<span class="text">{{car_Productiondate}}</span>
-											</div>
-											<div class="item">
-												<span class="title">Color:</span>
-												<span class="text">{{car_Color}}</span>
-											</div>
-											<div class="item">
-												<span class="title">Type of drive:</span>
-												<span class="text">{{car_Typeofdrive}}</span>
-											</div>
-											<div class="item">
-												<span class="title">Type of hybrid:</span>
-												<span class="text">{{car_Typeofhybrid}}</span>
-											</div>
-											<div class="item">
-												<span class="title">Drive type:</span>
-												<span class="text">{{car_Drivetype}}</span>
-											</div>
-										</div>
-									</div>	
-	 </script>
-
-	
-	
-	
-	 <script id="POISearchResultTemplate" type="text/x-handlebars-template">
-							
-							  {{#each result}}
-								<div data-id="{{this.id}}" class="pois-item">
-									<div class="pois-name">{{this.Name}}</div>
-									<div class="pois-adress">{{this.POI_address}}</div>
-									<div class="icons ml-auto">
-										<a href="#" class="flag-poi">
-											<img src="/project/templates/bmw/_ares/img/png/flag.png" alt="">
-										</a>
-										<a href="#" class="edit-poi">
-											<img src="/project/templates/bmw/_ares/img/png/edit.png" alt="">
-										</a>
-										<a href="#" class="close-poi">
-											<img src="/project/templates/bmw/_ares/img/png/close.png" alt="">
-										</a>
-									</div>
-								</div>
-							 {{/each}}
-							
-							<div class="flex align-right">
-								<a id="sendSuccess" href="#" class="btn btn-color-blue">Send</a>
-							</div>
-	
-	 </script>
-	 
-	 
-	 
-	 	 <script id="POIListItemTemplate" type="text/x-handlebars-template">
-	 		  
-			  {{#each result}}
-					<div class="pois-list-item " data-id="{{this.id}}">
-									<div class="pois-list-header">
-										<div class="pois-list-col mr-16">
-											<div class="pois-placeholder">
-												<img width="25px" src="{%F:ARES%}img/png/placeholder-pois.png" alt="">
-												<span class="pois-placeholder-num">A</span>
-											</div>
-										</div>
-										<div class="pois-list-col">
-											<div class="pois-list-name">{{this.Name}}</div>
-											<div class="pois-list-adress">{{this.POI_address}}</div>
-										</div>
-										<div class="pois-list-col mr-48">
-											<div class="icons">
-												<a href="">
-													<img src="{%F:ARES%}img/png/call-d.png" alt="">
-												</a>
-												<div class="pois-status open"></div>
-											</div>
-										</div>
-										<div class="pois-list-col mr-52">
-											<div class="item">
-												<span class="title">Distance:</span>
-												<span class="text">{{this.distance}} m</span>
-											</div>
-										</div>
-										<div class="pois-list-col">
-											<div class="item">
-												<span class="title">Provider:</span>
-												<span class="text">{{this.scope}}</span>
-											</div>
-										</div>
-										<div class="icons ml-auto">
-											<a href="#" class="add-poi">
-												<img src="{%F:ARES%}img/png/add-poi.png" alt="">
-											</a>
-											<a href="#" class="car-poi">
-												<img src="{%F:ARES%}img/png/car-poi.png" alt="">
-											</a>
-											<a href="#" class="way-poi">
-												<img src="{%F:ARES%}img/png/way-poi.png" alt="">
-											</a>
-											<a href="#" class="flag-poi-test">
-												<img src="{%F:ARES%}img/png/flag.png" alt="">
-											</a>
-										</div>
-									</div>
-									<div class="pois-list-content">
-										<div class="col col-1_2">
-											<div class="item">
-												<span class="title">URL:</span>
-												<span class="text">{{this.POI_Url}}</span>
-											</div>
-											<div class="item">
-												<span class="title">Rating:</span>
-												<span class="text"><span class="rating-pois">{{this.POI_rating}}</span></span>
-											</div>
-											<div class="item">
-												<span class="title">Phone:</span>
-												<span class="text">{{POI_Phone}}</span>
-												<a class="driver-lang">
-													<img src="{%F:ARES%}img/png/call.png" alt="">
-												</a>
-											</div>
-											<div class="item item-reviews">
-												<span class="title">Reviews:</span>
-												<span class="text">{{POI_review}}<a href="#" class="more">more</a></span>
-											</div>
-										</div>
-										<div class="col col-1_2">
-											<div class="item">
-												<span class="title">Provider:</span>
-												<span class="text">Google</span>
-											</div>
-											<div class="item">
-												<span class="title">Distance from vehicle:</span>
-												<span class="text">755 m</span>
-											</div>
-											<div class="item item-reviews">
-												<span class="title">Position:</span>
-												<span class="text">N 520 31’ 12.023’’, E 130 24’ 17.834’’, N 52.52, E 13.405</span>
-											</div>
-											<div class="item">
-												<span class="title">Opening hours:</span>
-												<div class="open-hours">
-													<div class="open-hours-day">
-														<div class="open-hours-title">Mon</div>
-														<div class="open-hours-text">10:00 23:00</div>
-													</div>
-													<div class="open-hours-day">
-														<div class="open-hours-title">Tue</div>
-														<div class="open-hours-text">10:00 23:00</div>
-													</div>
-													<div class="open-hours-day">
-														<div class="open-hours-title">Wed</div>
-														<div class="open-hours-text">10:00 23:00</div>
-													</div>
-													<div class="open-hours-day">
-														<div class="open-hours-title">Thu</div>
-														<div class="open-hours-text">10:00 23:00</div>
-													</div>
-													<div class="open-hours-day">
-														<div class="open-hours-title">Fri</div>
-														<div class="open-hours-text">10:00 23:00</div>
-													</div>
-													<div class="open-hours-day">
-														<div class="open-hours-title">Sat</div>
-														<div class="open-hours-text">10:00 23:00</div>
-													</div>
-													<div class="open-hours-day">
-														<div class="open-hours-title">Sun</div>
-														<div class="open-hours-text">10:00 23:00</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							{{/each}}
-	
-		 </script>
-
-
-		 <script  id="FavoriteItemTemplate" type="text/x-handlebars-template">	
-		 	{{#each result}}
-		 					<div class="col col-1_3" data-id="{{this.id}}">
-				    			<div class="favorites-modal-item">
-				    				<div class="favorites-modal-icons icons">
-				    					<a href="#" class="edit-favorites">
-											<img src="{%F:ARES%}img/png/edit.png" alt="">
-										</a>
-										<a href="#" class="close-favorites">
-											<img src="{%F:ARES%}img/png/close.png" alt="">
-										</a>
-				    				</div>
-				    				<div class="favorites-modal-icon">
-				    					<img src="{%F:ARES%}img/png/icons/{{this.favorite_iconType}}" alt="">
-				    				</div>
-				    				<div class="item">
-										<span class="title">Favorite name:</span>
-										<span class="text favorites-names">{{this.favorite_favoriteName}}</span>
-									</div>
-									<div class="item">
-										<span class="title">Search type:</span>
-										<span class="text">{{this.favorite_searchType}}</span>
-									</div>
-									<div class="item">
-										<span class="title">Language:</span>
-										<span class="text">{{this.favorite_language}}</span>
-									</div>
-									<div class="item">
-										<span class="title">What:</span>
-										<span class="text">{{this.favorite_what}}</span>
-									</div>
-									<div class="item">
-										<span class="title">Category:</span>
-
-										<span class="text">{{this.favorite_category}}</span>
-									</div>
-				    			</div>
-				    		</div>
-				    {{/each}}		
-		 </script>
-	
-	
-    {%F:Meta%} {%F:XFRONT_API%} 
-	
-    <script src="{%F:ARES%}components/jquery/jquery-3.3.1.min.js"></script>
-    <script src="{%F:ARES%}components/foundation/foundation.min.js"></script>
-    <script src="{%F:ARES%}components/form-styler/jquery.formstyler.js"></script>
-    <script src="{%F:ARES%}components/select2/select2.full.js"></script>
-	
-	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-	
-    <script src="{%F:ARES%}js/map.js"></script>
-	<script src="{%F:ARES%}js/dynamicPanel.js"></script>
-	<script src="{%F:ARES%}js/code.js"></script>
-	<script src="{%F:ARES%}js/app.js"></script>
-	<script src="{%F:ARES%}js/favorites.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM5DWOuibYiCiuvr6Eqmim_uq5CaT8m80&callback=initMap&libraries=places"></script>
+    <script src="assets/components/jquery/jquery-3.3.1.min.js"></script>
+    <script src="assets/components/foundation/foundation.min.js"></script>
+    <script src="assets/components/form-styler/jquery.formstyler.js"></script>
+    <script src="assets/components/select2/select2.full.js"></script>
+    <script src="assets/js/map.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM5DWOuibYiCiuvr6Eqmim_uq5CaT8m80&callback=initMap"></script>
 
 </body>
 </html>
-{%endsection:HEADER%}
